@@ -29,11 +29,11 @@ def w(path, text):
         f.write(text)
 
 
-def panel(d, gate_status="CONFIRMED_PARTIAL", contexts=("subagent", "subagent", "subagent"), passes=(True, True, True)):
+def panel(d, gate_status="CONFIRMED_PARTIAL", contexts=("subagent", "subagent", "subagent"), passes=(True, True, True), scope="one cell, exactly as reproduced."):
     for role, ctx, ok in zip(check_run.PANEL, contexts, passes):
-        w(os.path.join(d, role + ".md"), "# %s\ncontext: %s\nchecked %s independently.\npass: %s\n"
-          % (role, ctx, role, "true" if ok else "false"))
-    w(os.path.join(d, "gate.md"), "status: %s\nconfirmed_scope: one cell, exactly as reproduced.\n" % gate_status)
+        w(os.path.join(d, role + ".md"), "# %s\ncontext: %s\nchecked %s independently.\n%spass: %s\n"
+          % (role, ctx, role, ("confirmed_scope: %s\n" % scope) if role == "criterion" else "", "true" if ok else "false"))
+    w(os.path.join(d, "gate.md"), "status: %s\nconfirmed_scope: %s\n" % (gate_status, scope))
 
 
 class Base(unittest.TestCase):
@@ -147,7 +147,7 @@ class GoodFixtures(Base):
         w(os.path.join(self.R, "target.md"), "id: toy-cipher\n")
         self.attack(levels=("solution_claim", "negative"), null="required")
         w(os.path.join(self.R, "null_test.md"), "controls: 400\nbest_control: 0.41\nreal: 0.97\nreal_beats_all_controls: yes\ncommand: python3 null.py\n")
-        panel(os.path.join(self.W, "private", "toy-cipher", "panel"))
+        panel(os.path.join(self.W, "private", "toy-cipher", "panel"), scope="key reproduces the ciphertext.")
         w(os.path.join(self.R, "panel", "gate.md"), "status: CONFIRMED_SOLUTION\nconfirmed_scope: key reproduces the ciphertext.\n")
         w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
         w(os.path.join(self.W, "outbox", "2026-10-12-tester-deadbeef", "envelope.md"),
