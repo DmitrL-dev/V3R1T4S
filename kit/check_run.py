@@ -480,16 +480,55 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
     if os.path.isdir(os.path.join(pkg, "panel")):
         check_panel(c, os.path.join(pkg, "panel"), label)
     # sha256sums
-    sums = read(os.path.join(pkg, "SHA256SUMS"))
+    try:
+        # Use the filesystem's lossless filename decoding, not read()'s UTF-8
+        # replacement: distinct raw names must not collapse onto U+FFFD.
+        with open(os.path.join(pkg, "SHA256SUMS"), "rb") as manifest:
+            raw_sums = manifest.read(MAX_SCAN + 1)
+        if len(raw_sums) > MAX_SCAN:
+            c.fail("%s: SHA256SUMS exceeds the scan limit" % label)
+            sums = ""
+        else:
+            sums = os.fsdecode(raw_sums)
+    except OSError as e:
+        c.fail("%s: cannot read SHA256SUMS (%s)" % (label, e.strerror))
+        sums = ""
     listed = {}
-    for line in sums.splitlines():
-        m = re.match(r"^([0-9a-f]{64})\s+\*?(.+)$", line.strip())
-        if m:
-            r = os.path.normpath(m.group(2))
-            if os.path.isabs(r) or r == os.pardir or r.startswith(os.pardir + os.sep):
-                c.fail("%s: SHA256SUMS path leaves the package: %s" % (label, r))
-            else:
-                listed[r] = m.group(1)
+    # Read physical records, not splitlines(): filenames can contain VT/FF or
+    # Unicode separators. Preserve filename whitespace and GNU name escapes.
+    for number, line in enumerate(sums.split("\n"), 1):
+        line = line[:-1] if line.endswith("\r") else line
+        if not line or line.startswith("#"):
+            continue
+        m = re.fullmatch(r"(\\?)([0-9a-fA-F]{64}) ([ *])(.+)", line)
+        if not m:
+            c.fail("%s: malformed SHA256SUMS record on line %d" % (label, number))
+            continue
+        name = m.group(4)
+        if m.group(1):
+            if not re.fullmatch(r"(?:[^\\]|\\[\\nr])*", name):
+                c.fail("%s: invalid SHA256SUMS filename escape on line %d" % (label, number))
+                continue
+            name = re.sub(r"\\([\\nr])", lambda x: {"\\": "\\", "n": "\n", "r": "\r"}[x.group(1)], name)
+        if "\0" in name:
+            c.fail("%s: NUL in SHA256SUMS filename on line %d" % (label, number))
+            continue
+        if name == "-":
+            c.fail("%s: SHA256SUMS '-' means stdin; use './-' for that filename" % label)
+            continue
+        r = os.path.normpath(name)
+        if os.path.isabs(r) or r == os.pardir or r.startswith(os.pardir + os.sep):
+            c.fail("%s: SHA256SUMS path leaves the package: %s" % (label, r))
+        elif r == "SHA256SUMS":
+            c.fail("%s: SHA256SUMS must not list itself" % label)
+        elif r in listed:
+            c.fail("%s: duplicate SHA256SUMS path: %s" % (label, r))
+        else:
+            # Preflight already rejected symlinks. Do not let normalization
+            # invent a path such as missing/../README.md or README.md/.
+            if not os.path.isfile(os.path.join(pkg, name)):
+                c.fail("%s: SHA256SUMS filename does not resolve to a regular file: %s" % (label, name))
+            listed[r] = m.group(2).lower()
     for p in files:
         r = os.path.normpath(rel(p, pkg))
         if r == "SHA256SUMS":
