@@ -464,7 +464,9 @@ def run_own_checker(c, pkg, label, timeout):
         if rc2 == 0 and re.search(r"\bPASS\b", last_nonempty(out2)):
             c.warn("%s: the checker still printed PASS after one digit of the object was changed; make sure it really checks the object" % label)
         else:
-            c.ok("%s: a corrupted copy of the object is rejected" % label)
+            # There is no generic protocol distinguishing semantic rejection
+            # from a missing dependency, crash, timeout or malformed output.
+            c.warn("%s: corrupted-copy check is inconclusive (exit %s); no semantic rejection was established" % (label, rc2))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
