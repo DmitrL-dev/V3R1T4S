@@ -191,6 +191,23 @@ def confirmed_mentions(path):
     return hits
 
 
+def check_panel_scope(c, panel_dir, gate_path, label):
+    """Bind the chosen CRITERION scope to the authoritative gate's parsed value."""
+    before = len(c.fails)
+    source = critical_kv(c, read(os.path.join(panel_dir, "criterion.md")),
+                         "%s: criterion.md" % label, {"confirmed_scope"})
+    gate = critical_kv(c, read(gate_path), "%s: gate.md" % label, {"confirmed_scope"})
+    expected = source.get("confirmed_scope", "")
+    actual = gate.get("confirmed_scope", "")
+    if not expected:
+        c.fail("%s: criterion.md has no nonempty confirmed_scope" % label)
+    if not actual:
+        c.fail("%s: gate.md has no nonempty confirmed_scope" % label)
+    if expected and actual and expected != actual:
+        c.fail("%s: gate.md confirmed_scope differs from criterion.md" % label)
+    return len(c.fails) == before
+
+
 def check_panel(c, panel_dir, label, require_confirmed=True):
     """Three panel files with context and pass: true, plus gate.md. Returns True if all good."""
     good = True
@@ -239,6 +256,8 @@ def check_panel(c, panel_dir, label, require_confirmed=True):
             good = False
         elif not g.get("confirmed_scope"):
             c.fail("%s: gate.md has no confirmed_scope line" % label)
+            good = False
+        if not check_panel_scope(c, panel_dir, gate, label):
             good = False
     return good
 
@@ -350,8 +369,10 @@ def check_envelope(c, path, workdir=None, bank=None, files=None):
 def find_confirmed_gate(workdir, target):
     for run in sorted(os.listdir(os.path.join(workdir, "runs"))) if os.path.isdir(os.path.join(workdir, "runs")) else []:
         rd = os.path.join(workdir, "runs", run)
-        tid = kv(read(os.path.join(rd, "target.md"))).get("id", "")
-        if tid != target:
+        target_check = Checker(quiet=True)
+        tid = critical_kv(target_check, read(os.path.join(rd, "target.md")),
+                          "target.md", {"id"}).get("id", "")
+        if target_check.fails or tid != target:
             continue
         gate = os.path.join(rd, "panel", "gate.md")
         gate_check = Checker(quiet=True)
@@ -361,6 +382,7 @@ def find_confirmed_gate(workdir, target):
                 if all(os.path.isfile(os.path.join(pd, r + ".md")) for r in PANEL):
                     sub = Checker(quiet=True)
                     check_panel(sub, pd, "x", require_confirmed=False)
+                    check_panel_scope(sub, pd, gate, "x")
                     if not sub.fails:
                         return True
     return False
@@ -843,6 +865,7 @@ def check_run_dir(c, workdir, run, bank, dry):
         mentions.append("LOG.md (last line)")
     confirmed = bool(mentions) or gate.get("status", "") in CONFIRMED_STATUSES
     if confirmed:
+        critical_kv(c, read(os.path.join(run, "target.md")), label + ": target.md", {"id"})
         if not completed_status:
             c.fail("%s: CONFIRMED_* requires a completed status/table check" % label)
         where = [d for d in (panel_dir, priv_panel) if d and all(os.path.isfile(os.path.join(d, r + ".md")) for r in PANEL)]
@@ -855,6 +878,7 @@ def check_run_dir(c, workdir, run, bank, dry):
                 ok = False
         if ok:
             check_panel(c, pd, label, require_confirmed=False)
+            check_panel_scope(c, pd, os.path.join(panel_dir, "gate.md"), label)
             if gate.get("status", "") not in CONFIRMED_STATUSES:
                 c.fail("%s: CONFIRMED_* written (%s) but panel/gate.md does not say status: CONFIRMED_*" % (label, ", ".join(mentions[:3])))
             elif not gate.get("confirmed_scope"):
