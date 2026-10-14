@@ -1,0 +1,34 @@
+{
+  "repository": "DmitrL-dev/V3R1T4S",
+  "commit": "91419e28c801adb3c4b3fe92d7c50c56a543b237",
+  "wrappers": [
+    {
+      "path": "known-knowns/biggest-graphs/verify-it-yourself/run_checks.sh",
+      "git_blob_sha1": "5746edb542d46b0842b8ee55310bc5e997530edb",
+      "sha256": "ca1dd7a617c9e04836e0cacda6b4329a26f9365d16dc49f2a6c6a535ba14756d",
+      "url": "https://github.com/DmitrL-dev/V3R1T4S/blob/91419e28c801adb3c4b3fe92d7c50c56a543b237/known-knowns/biggest-graphs/verify-it-yourself/run_checks.sh",
+      "snapshot": "sources/biggest-graphs.sh"
+    },
+    {
+      "path": "known-knowns/bigger-codes/verify-it-yourself/run_checks.sh",
+      "git_blob_sha1": "cfc2dfe972908395ee9b18f1773a02dadbcfbc37",
+      "sha256": "1bca14dc96df04cae8b9d462ca0da86b0dbcb15dd5352262e25f94bf5f553538",
+      "url": "https://github.com/DmitrL-dev/V3R1T4S/blob/91419e28c801adb3c4b3fe92d7c50c56a543b237/known-knowns/bigger-codes/verify-it-yourself/run_checks.sh",
+      "snapshot": "sources/bigger-codes.sh"
+    },
+    {
+      "path": "known-knowns/faster-matrix-multiplication/verify-it-yourself/run_checks.sh",
+      "git_blob_sha1": "ee4ee145b421850780adeb2a82cbc360cd39b59c",
+      "sha256": "104924acb129fcc3740f78b50818c58acf0d204fc1f7a3a9af0b3b2df3f26b1a",
+      "url": "https://github.com/DmitrL-dev/V3R1T4S/blob/91419e28c801adb3c4b3fe92d7c50c56a543b237/known-knowns/faster-matrix-multiplication/verify-it-yourself/run_checks.sh",
+      "snapshot": "sources/faster-matrix-multiplication.sh"
+    },
+    {
+      "path": "known-knowns/vnncomp-2026-unsolved-instances/verify-it-yourself/run_checks.sh",
+      "git_blob_sha1": "45fc854a032c56e0b9434640bed5ba45f6b1e18f",
+      "sha256": "85cd214ee2812b4564b0adc140188131a6e237bf676a07879cc5002918bfb557",
+      "url": "https://github.com/DmitrL-dev/V3R1T4S/blob/91419e28c801adb3c4b3fe92d7c50c56a543b237/known-knowns/vnncomp-2026-unsolved-instances/verify-it-yourself/run_checks.sh",
+      "snapshot": "sources/vnncomp-2026-unsolved-instances.sh"
+    }
+  ]
+}
