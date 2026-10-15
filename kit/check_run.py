@@ -505,8 +505,8 @@ def secret_windows(workdir, public_texts, bank=None):
     if not os.path.isdir(priv):
         return secrets
     public = set()
-    for t in public_texts:
-        n = norm(t)
+    public_documents = [norm(t) for t in public_texts]
+    for n in public_documents:
         for i in range(0, max(0, len(n) - W + 1)):
             public.add(n[i:i + W])
     for tid in sorted(os.listdir(priv)):
@@ -520,7 +520,7 @@ def secret_windows(workdir, public_texts, bank=None):
             if len(n) < 8:
                 continue
             if len(n) < W:
-                if n not in public:
+                if not any(n in document for document in public_documents):
                     secrets.setdefault(n, (tid, rel(p, workdir)))
                 continue
             for i in range(0, len(n) - W + 1, 4):
