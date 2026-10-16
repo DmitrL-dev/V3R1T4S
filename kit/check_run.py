@@ -53,6 +53,7 @@ ENVELOPE_LABELS = "key|settings|decryption|plaintext|verification output|other"
 class Checker:
     def __init__(self, quiet=False):
         self.fails, self.warns, self.quiet = [], [], quiet
+        self.receipt = None
 
     def say(self, msg):
         if not self.quiet:
@@ -78,6 +79,96 @@ class Checker:
 
 
 # ---------- helpers ----------
+
+class RunReceipt:
+    """Optional, unattested observations; never a gate or scientific verdict."""
+    def __init__(self, execute, timeout):
+        self.omission = "unsupported_or_nonopen_package"
+        self.bank_unambiguous = False
+        self.data = {
+            "schema_version": 1,
+            "provenance": "local_observation_unattested",
+            "mode": {"kind": "package", "execute": execute, "timeout_seconds": timeout},
+            "checker_sha256": None,
+            "input_manifest_sha256": None,
+            "checks": [{"id": name, "execution": "NOT_RUN", "exit_status": None,
+                        "reported_terminal": None, "reason": "not_reached"}
+                       for name in ("clean", "mutated_object")],
+            "gate_exit_status": None,
+        }
+        if not execute:
+            for item in self.data["checks"]:
+                item["reason"] = "execution_disabled"
+
+    def prepare(self, pkg, bank, bank_errors, rows):
+        # Export is narrower than the gate: no private, unknown or ambiguous targets.
+        if not self.bank_unambiguous:
+            self.omission = "bank_ambiguous_or_unavailable"
+            return
+        if bank_errors or len(rows) != 2 or rows[0].count("target_id") != 1:
+            return
+        column = rows[0].index("target_id")
+        if len(rows[1]) != len(rows[0]):
+            return
+        entry = bank.get(rows[1][column].strip(), {})
+        if entry.get("disclosure") != "open":
+            return
+        try:
+            self.data["checker_sha256"] = hashlib.sha256(rbytes(__file__)).hexdigest()
+            # Identity of this manifest file only, NOT complete/verified input identity.
+            manifest = os.path.join(pkg, "SHA256SUMS")
+            if os.path.islink(manifest) or not os.path.isfile(manifest):
+                self.omission = "manifest_unavailable"
+                return
+            with open(manifest, "rb") as f:
+                content = f.read(MAX_SCAN + 1)
+            if len(content) > MAX_SCAN:
+                self.omission = "manifest_unavailable"
+                return
+            self.data["input_manifest_sha256"] = hashlib.sha256(content).hexdigest()
+        except OSError:
+            self.omission = "digest_unavailable"
+            return
+        self.omission = None
+
+    def observe(self, name, execution, status=None, output=None, reason=None):
+        item = next(item for item in self.data["checks"] if item["id"] == name)
+        terminal = last_nonempty(output) if output is not None else None
+        item.update(execution=execution, exit_status=status, reason=reason,
+                    reported_terminal=terminal if terminal in ("PASS", "FAIL")
+                    else ("OTHER" if terminal is not None else None))
+
+    def export(self, destination, pkg, workdir, status):
+        if self.omission:
+            return self.omission
+        temporary = None
+        try:
+            # Final component must be new. Resolve parent aliases before containment checks.
+            destination = os.path.abspath(destination)
+            parent = os.path.realpath(os.path.dirname(destination))
+            output = os.path.join(parent, os.path.basename(destination))
+            for root in (pkg, workdir):
+                if root and os.path.commonpath((output, os.path.realpath(root))) == os.path.realpath(root):
+                    return "destination_inside_input"
+            self.data["gate_exit_status"] = status
+            payload = (json.dumps(self.data, sort_keys=True, indent=2) + "\n").encode("utf-8")
+            # mkstemp creates mode 0600; only complete bytes become the final name.
+            fd, temporary = tempfile.mkstemp(prefix=".run-receipt-", dir=parent)
+            with os.fdopen(fd, "wb") as f:
+                f.write(payload)
+            # Hard-link creation is atomic and fails if the final name exists,
+            # including a symlink. No replacing rename or copy fallback.
+            os.link(temporary, output, follow_symlinks=False)
+            return None
+        except (OSError, ValueError, NotImplementedError):
+            return "export_failed"
+        finally:
+            if temporary is not None:
+                try:
+                    os.unlink(temporary)
+                except OSError:
+                    pass
+
 
 def rbytes(path):
     with open(path, "rb") as f:
@@ -137,7 +228,7 @@ def last_nonempty(text):
     return lines[-1] if lines else ""
 
 
-def load_bank(workdir, settings, errors=None):
+def load_bank(workdir, settings, errors=None, receipt=None):
     """First readable bank among the candidates. A candidate that exists but cannot be read or
     parsed is appended to `errors` (if given) so the caller can fail loudly instead of running
     without the bank's guards."""
@@ -153,6 +244,9 @@ def load_bank(workdir, settings, errors=None):
         try:
             with open(p, encoding="utf-8") as f:
                 data = json.load(f)
+            if receipt is not None:
+                ids = [t["id"] for t in data.get("targets", [])]
+                receipt.bank_unambiguous = len(ids) == len(set(ids))
             return {t["id"]: t for t in data.get("targets", [])}, os.path.dirname(os.path.abspath(p))
         except FileNotFoundError:
             continue
@@ -341,7 +435,8 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
     label = "package %s" % os.path.basename(pkg)
     settings = kv(read(os.path.join(workdir, "settings.md"))) if workdir else {}
     bank_errors = []
-    bank, _ = load_bank(workdir, settings, bank_errors)
+    bank, _ = (load_bank(workdir, settings, bank_errors, c.receipt) if c.receipt is not None
+               else load_bank(workdir, settings, bank_errors))
     for e in bank_errors:
         c.fail("could not read the bank %s" % e)
     if not bank:
@@ -382,6 +477,7 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
     if "unverified" not in read(os.path.join(pkg, "HOW_WE_FOUND_IT.md")).lower():
         c.fail("%s: HOW_WE_FOUND_IT.md must be marked 'contributor text, unverified'" % label)
     target = None
+    rows = []
     try:
         rows = list(csv.reader(io.StringIO(read(os.path.join(pkg, "INDEX.csv")))))
         if len(rows) < 2 or "target_id" not in rows[0]:
@@ -390,6 +486,8 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
             target = rows[1][rows[0].index("target_id")].strip()
     except (csv.Error, IndexError):
         c.fail("%s: INDEX.csv is not valid CSV" % label)
+    if c.receipt is not None:
+        c.receipt.prepare(pkg, bank, bank_errors, rows)
     rec = " ".join(read(p) for p in walk(os.path.join(pkg, "the-record-we-beat")) if is_text(p))
     if not (re.search(r"https?://", rec) and re.search(r"\b[0-9a-f]{64}\b", rec) and re.search(r"\d{4}-\d\d-\d\dT\d\d:\d\d", rec)):
         c.fail("%s: the-record-we-beat/ needs the table URL, a UTC fetch time and the page's sha256" % label)
@@ -439,16 +537,28 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
         run_own_checker(c, pkg, label, timeout)
 
 
-def _run_checks(root, timeout):
+def _run_checks(root, timeout, observer=None, check_id=None):
     sh = shutil.which("sh") or shutil.which("bash")
     if not sh:
+        if observer is not None:
+            observer.observe(check_id, "NOT_RUN", reason="shell_unavailable")
         return None, "no sh"
     try:
         r = subprocess.run([sh, "verify-it-yourself/run_checks.sh"], cwd=root, stdout=subprocess.PIPE,
                            stderr=subprocess.STDOUT, timeout=timeout)
-        return r.returncode, r.stdout.decode("utf-8", "replace")
+        output = r.stdout.decode("utf-8", "replace")
+        if observer is not None:
+            observer.observe(check_id, "COMPLETED" if r.returncode >= 0 else "INCONCLUSIVE",
+                             r.returncode, output, "signal" if r.returncode < 0 else None)
+        return r.returncode, output
     except subprocess.TimeoutExpired:
+        if observer is not None:
+            observer.observe(check_id, "TIMEOUT", reason="timeout")
         return -1, "TIMEOUT"
+    except OSError as e:
+        if observer is not None:
+            observer.observe(check_id, "INCONCLUSIVE", reason="launch_error")
+        return -1, "could not run checker: %s" % e
 
 
 def run_own_checker(c, pkg, label, timeout):
@@ -456,7 +566,8 @@ def run_own_checker(c, pkg, label, timeout):
     try:
         clean = os.path.join(tmp, "clean")
         shutil.copytree(pkg, clean)
-        rc, out = _run_checks(clean, timeout)
+        rc, out = (_run_checks(clean, timeout, c.receipt, "clean") if c.receipt is not None
+                   else _run_checks(clean, timeout))
         if rc is None:
             c.warn("%s: no sh found; could not run run_checks.sh" % label)
             return
@@ -482,11 +593,16 @@ def run_own_checker(c, pkg, label, timeout):
         if not changed:
             c.warn("%s: could not build a corrupted copy of object/ to test the checker" % label)
             return
-        rc2, out2 = _run_checks(bad, timeout)
+        rc2, out2 = (_run_checks(bad, timeout, c.receipt, "mutated_object") if c.receipt is not None
+                     else _run_checks(bad, timeout))
         if rc2 == 0 and re.search(r"\bPASS\b", last_nonempty(out2)):
             c.warn("%s: the checker still printed PASS after one digit of the object was changed; make sure it really checks the object" % label)
-        else:
+        elif rc2 is not None and rc2 > 0 and last_nonempty(out2) == "FAIL":
+            # SUBMIT.md defines terminal PASS/FAIL. Negative statuses are
+            # signals or our execution-error sentinel, not protocol rejection.
             c.ok("%s: a corrupted copy of the object is rejected" % label)
+        else:
+            c.warn("%s: corrupted-copy check is inconclusive (exit %s); no semantic rejection was established" % (label, rc2))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
@@ -857,17 +973,31 @@ def main(argv=None):
     ap.add_argument("--workdir", dest="workdir2", help="workspace for --package (bank, never-publish list, panels)")
     ap.add_argument("--no-exec", action="store_true", help="do not run the package's own checker")
     ap.add_argument("--timeout", type=int, default=900, help="seconds allowed for run_checks.sh")
+    ap.add_argument("--receipt-json", help="write unattested run observations to a new external JSON file (open packages only)")
     a = ap.parse_args(argv)
     c = Checker()
     if a.package:
         wd = a.workdir2 or a.workdir
-        check_package(c, a.package, os.path.abspath(wd) if wd else None, execute=not a.no_exec, timeout=a.timeout)
+        if a.receipt_json:
+            c.receipt = RunReceipt(not a.no_exec, a.timeout)
+        try:
+            check_package(c, a.package, os.path.abspath(wd) if wd else None, execute=not a.no_exec, timeout=a.timeout)
+        except Exception:
+            if a.receipt_json:
+                print("RECEIPT: omitted (checker_interrupted)", file=sys.stderr)
+            raise
     elif a.workdir:
         check_workspace(c, a.workdir, a.run, a.setup, execute=not a.no_exec, timeout=a.timeout)
     else:
         ap.print_help()
         return 2
-    return c.finish()
+    status = c.finish()
+    if a.receipt_json:
+        reason = (c.receipt.export(a.receipt_json, a.package, wd, status)
+                  if c.receipt is not None else "workspace_mode_unsupported")
+        if reason:
+            print("RECEIPT: omitted (%s)" % reason, file=sys.stderr)
+    return status
 
 
 if __name__ == "__main__":
