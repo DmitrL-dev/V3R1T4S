@@ -1,0 +1,9 @@
+{
+  "protocol": "VD-CPU-01-r2",
+  "sha256": {
+    "benchmark.py": "b56f7cdee77e912fd7cccb4a8f80a4b5a59e52d485247bfed5e904ad7cf27f0f",
+    "test_benchmark.py": "948b75991cdb7043665e3a80929238b6058dee5dfb78bc9bebe9c19534f6572d",
+    "PROTOCOL.md": "23f9a332cb77def37f5e7a326b22962c9ff2d865eeb7fcf4e7802eb13c336340",
+    "README.md": "1af0a8725ef8abc56a5b7101bf39a1dc518ec3aaff7d480d3aa0ece7c40b3d2d"
+  }
+}

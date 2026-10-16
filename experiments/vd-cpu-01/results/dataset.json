@@ -1,0 +1,8521 @@
+{
+  "bases": [
+    {
+      "id": "graph-00",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 2,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-01",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 3,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-02",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-03",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-04",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 3,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-05",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 4,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-06",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 4,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-07",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 3,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-08",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 3,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-09",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 3,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-10",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-11",
+      "split": "development",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-12",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 3,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-13",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 4,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-14",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 4,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-15",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 6,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-16",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 2,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-17",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 3,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-18",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 5,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-19",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "graph-20",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 4,
+        "degree": 3,
+        "diameter": 1
+      }
+    },
+    {
+      "id": "graph-21",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 5,
+        "degree": 3,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-22",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 6,
+        "degree": 4,
+        "diameter": 2
+      }
+    },
+    {
+      "id": "graph-23",
+      "split": "regression",
+      "family": "graph",
+      "object": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      },
+      "claim": {
+        "vertices": 7,
+        "degree": 4,
+        "diameter": 3
+      }
+    },
+    {
+      "id": "code-00",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 4,
+        "words": [
+          "1011",
+          "1101"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 3,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-01",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 5,
+        "words": [
+          "10111",
+          "11011",
+          "11101"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 4,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-02",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 6,
+        "words": [
+          "000011",
+          "000101",
+          "000110",
+          "101000"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 2,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-03",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 7,
+        "words": [
+          "1011111",
+          "1110111",
+          "1111011",
+          "1111101",
+          "1111110"
+        ]
+      },
+      "claim": {
+        "count": 5,
+        "weight": 6,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-04",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 8,
+        "words": [
+          "01011000",
+          "10010001"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 3,
+        "distance": 4
+      }
+    },
+    {
+      "id": "code-05",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 4,
+        "words": [
+          "0011",
+          "0110",
+          "1100"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 2,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-06",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 5,
+        "words": [
+          "00101",
+          "01001",
+          "10100",
+          "11000"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 2,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-07",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 6,
+        "words": [
+          "010101",
+          "011001",
+          "011100",
+          "110001",
+          "110010"
+        ]
+      },
+      "claim": {
+        "count": 5,
+        "weight": 3,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-08",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 7,
+        "words": [
+          "0000010",
+          "0001000"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 1,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-09",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 8,
+        "words": [
+          "01111011",
+          "10111101",
+          "11111010"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 6,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-10",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 4,
+        "words": [
+          "0001",
+          "0010",
+          "0100",
+          "1000"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 1,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-11",
+      "split": "development",
+      "family": "code",
+      "object": {
+        "length": 5,
+        "words": [
+          "01111",
+          "10111",
+          "11011",
+          "11101",
+          "11110"
+        ]
+      },
+      "claim": {
+        "count": 5,
+        "weight": 4,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-12",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 6,
+        "words": [
+          "110111",
+          "111110"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 5,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-13",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 7,
+        "words": [
+          "0000111",
+          "0010101",
+          "0100011"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 3,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-14",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 8,
+        "words": [
+          "00011101",
+          "00110011",
+          "01010101",
+          "10001110"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 4,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-15",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 4,
+        "words": [
+          "0111",
+          "1011",
+          "1101",
+          "1110"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 3,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-16",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 5,
+        "words": [
+          "00010",
+          "10000"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 1,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-17",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 6,
+        "words": [
+          "011010",
+          "101100",
+          "111000"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 3,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-18",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 7,
+        "words": [
+          "0111111",
+          "1101111",
+          "1111011",
+          "1111101"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 6,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-19",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 8,
+        "words": [
+          "10010111",
+          "10011110",
+          "10110110",
+          "10111100",
+          "11110010"
+        ]
+      },
+      "claim": {
+        "count": 5,
+        "weight": 5,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-20",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 4,
+        "words": [
+          "0011",
+          "0110"
+        ]
+      },
+      "claim": {
+        "count": 2,
+        "weight": 2,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-21",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 5,
+        "words": [
+          "00101",
+          "10100",
+          "11000"
+        ]
+      },
+      "claim": {
+        "count": 3,
+        "weight": 2,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-22",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 6,
+        "words": [
+          "011111",
+          "110111",
+          "111011",
+          "111101"
+        ]
+      },
+      "claim": {
+        "count": 4,
+        "weight": 5,
+        "distance": 2
+      }
+    },
+    {
+      "id": "code-23",
+      "split": "regression",
+      "family": "code",
+      "object": {
+        "length": 7,
+        "words": [
+          "0001101",
+          "0010011",
+          "0100101",
+          "1001100",
+          "1010001"
+        ]
+      },
+      "claim": {
+        "count": 5,
+        "weight": 3,
+        "distance": 2
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "graph-00/true",
+      "base": "graph-00",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-00/permuted_true",
+      "base": "graph-00",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-00/false_degree",
+      "base": "graph-00",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 1,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-00/false_diameter",
+      "base": "graph-00",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-01/true",
+      "base": "graph-01",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-01/permuted_true",
+      "base": "graph-01",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-01/false_degree",
+      "base": "graph-01",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-01/false_diameter",
+      "base": "graph-01",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-02/true",
+      "base": "graph-02",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-02/permuted_true",
+      "base": "graph-02",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-02/false_degree",
+      "base": "graph-02",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-02/false_diameter",
+      "base": "graph-02",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-03/true",
+      "base": "graph-03",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-03/permuted_true",
+      "base": "graph-03",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-03/false_degree",
+      "base": "graph-03",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-03/false_diameter",
+      "base": "graph-03",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-04/true",
+      "base": "graph-04",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-04/permuted_true",
+      "base": "graph-04",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-04/false_degree",
+      "base": "graph-04",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-04/false_diameter",
+      "base": "graph-04",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-05/true",
+      "base": "graph-05",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-05/permuted_true",
+      "base": "graph-05",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-05/false_degree",
+      "base": "graph-05",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-05/false_diameter",
+      "base": "graph-05",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-06/true",
+      "base": "graph-06",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-06/permuted_true",
+      "base": "graph-06",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-06/false_degree",
+      "base": "graph-06",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-06/false_diameter",
+      "base": "graph-06",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-07/true",
+      "base": "graph-07",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-07/permuted_true",
+      "base": "graph-07",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-07/false_degree",
+      "base": "graph-07",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 2,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-07/false_diameter",
+      "base": "graph-07",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-08/true",
+      "base": "graph-08",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-08/permuted_true",
+      "base": "graph-08",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-08/false_degree",
+      "base": "graph-08",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-08/false_diameter",
+      "base": "graph-08",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-09/true",
+      "base": "graph-09",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-09/permuted_true",
+      "base": "graph-09",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-09/false_degree",
+      "base": "graph-09",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 2,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-09/false_diameter",
+      "base": "graph-09",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-10/true",
+      "base": "graph-10",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-10/permuted_true",
+      "base": "graph-10",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-10/false_degree",
+      "base": "graph-10",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-10/false_diameter",
+      "base": "graph-10",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-11/true",
+      "base": "graph-11",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-11/permuted_true",
+      "base": "graph-11",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-11/false_degree",
+      "base": "graph-11",
+      "split": "development",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-11/false_diameter",
+      "base": "graph-11",
+      "split": "development",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-12/true",
+      "base": "graph-12",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-12/permuted_true",
+      "base": "graph-12",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-12/false_degree",
+      "base": "graph-12",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-12/false_diameter",
+      "base": "graph-12",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-13/true",
+      "base": "graph-13",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-13/permuted_true",
+      "base": "graph-13",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-13/false_degree",
+      "base": "graph-13",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-13/false_diameter",
+      "base": "graph-13",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 4,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-14/true",
+      "base": "graph-14",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-14/permuted_true",
+      "base": "graph-14",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-14/false_degree",
+      "base": "graph-14",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-14/false_diameter",
+      "base": "graph-14",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-15/true",
+      "base": "graph-15",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 6,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-15/permuted_true",
+      "base": "graph-15",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 6,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-15/false_degree",
+      "base": "graph-15",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 5,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-15/false_diameter",
+      "base": "graph-15",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 6,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-16/true",
+      "base": "graph-16",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-16/permuted_true",
+      "base": "graph-16",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-16/false_degree",
+      "base": "graph-16",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 1,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-16/false_diameter",
+      "base": "graph-16",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-17/true",
+      "base": "graph-17",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-17/permuted_true",
+      "base": "graph-17",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-17/false_degree",
+      "base": "graph-17",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 2,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-17/false_diameter",
+      "base": "graph-17",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-18/true",
+      "base": "graph-18",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 5,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-18/permuted_true",
+      "base": "graph-18",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 5,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-18/false_degree",
+      "base": "graph-18",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-18/false_diameter",
+      "base": "graph-18",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 5,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-19/true",
+      "base": "graph-19",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-19/permuted_true",
+      "base": "graph-19",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-19/false_degree",
+      "base": "graph-19",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-19/false_diameter",
+      "base": "graph-19",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-20/true",
+      "base": "graph-20",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-20/permuted_true",
+      "base": "graph-20",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-20/false_degree",
+      "base": "graph-20",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 2,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-20/false_diameter",
+      "base": "graph-20",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 4,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 4,
+          "degree": 3,
+          "diameter": 0
+        }
+      }
+    },
+    {
+      "id": "graph-21/true",
+      "base": "graph-21",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-21/permuted_true",
+      "base": "graph-21",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-21/false_degree",
+      "base": "graph-21",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 2,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-21/false_diameter",
+      "base": "graph-21",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 5,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 5,
+          "degree": 3,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-22/true",
+      "base": "graph-22",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-22/permuted_true",
+      "base": "graph-22",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-22/false_degree",
+      "base": "graph-22",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 3,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "graph-22/false_diameter",
+      "base": "graph-22",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 6,
+          "degree": 4,
+          "diameter": 1
+        }
+      }
+    },
+    {
+      "id": "graph-23/true",
+      "base": "graph-23",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-23/permuted_true",
+      "base": "graph-23",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-23/false_degree",
+      "base": "graph-23",
+      "split": "regression",
+      "variant": "false_degree",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 3,
+          "diameter": 3
+        }
+      }
+    },
+    {
+      "id": "graph-23/false_diameter",
+      "base": "graph-23",
+      "split": "regression",
+      "variant": "false_diameter",
+      "expected": false,
+      "input": {
+        "family": "graph",
+        "object": {
+          "n": 7,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ]
+          ]
+        },
+        "claim": {
+          "vertices": 7,
+          "degree": 4,
+          "diameter": 2
+        }
+      }
+    },
+    {
+      "id": "code-00/true",
+      "base": "code-00",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "1011",
+            "1101"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-00/permuted_true",
+      "base": "code-00",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "1011",
+            "1101"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-00/false_distance",
+      "base": "code-00",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "1011",
+            "1101"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-00/false_count",
+      "base": "code-00",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "1011",
+            "1101"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-01/true",
+      "base": "code-01",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "10111",
+            "11011",
+            "11101"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-01/permuted_true",
+      "base": "code-01",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "10111",
+            "11011",
+            "11101"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-01/false_distance",
+      "base": "code-01",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "10111",
+            "11011",
+            "11101"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 4,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-01/false_count",
+      "base": "code-01",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "10111",
+            "11011",
+            "11101"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-02/true",
+      "base": "code-02",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "000011",
+            "000101",
+            "000110",
+            "101000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-02/permuted_true",
+      "base": "code-02",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "000101",
+            "011000",
+            "101000",
+            "110000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-02/false_distance",
+      "base": "code-02",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "000011",
+            "000101",
+            "000110",
+            "101000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-02/false_count",
+      "base": "code-02",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "000011",
+            "000101",
+            "000110",
+            "101000"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-03/true",
+      "base": "code-03",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1011111",
+            "1110111",
+            "1111011",
+            "1111101",
+            "1111110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-03/permuted_true",
+      "base": "code-03",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0111111",
+            "1011111",
+            "1101111",
+            "1110111",
+            "1111101"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-03/false_distance",
+      "base": "code-03",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1011111",
+            "1110111",
+            "1111011",
+            "1111101",
+            "1111110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 6,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-03/false_count",
+      "base": "code-03",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1011111",
+            "1110111",
+            "1111011",
+            "1111101",
+            "1111110"
+          ]
+        },
+        "claim": {
+          "count": 6,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-04/true",
+      "base": "code-04",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01011000",
+            "10010001"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 4
+        }
+      }
+    },
+    {
+      "id": "code-04/permuted_true",
+      "base": "code-04",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "10001001",
+            "00011010"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 4
+        }
+      }
+    },
+    {
+      "id": "code-04/false_distance",
+      "base": "code-04",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01011000",
+            "10010001"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 3,
+          "distance": 5
+        }
+      }
+    },
+    {
+      "id": "code-04/false_count",
+      "base": "code-04",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01011000",
+            "10010001"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 4
+        }
+      }
+    },
+    {
+      "id": "code-05/true",
+      "base": "code-05",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110",
+            "1100"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-05/permuted_true",
+      "base": "code-05",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110",
+            "1100"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-05/false_distance",
+      "base": "code-05",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110",
+            "1100"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-05/false_count",
+      "base": "code-05",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110",
+            "1100"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-06/true",
+      "base": "code-06",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "01001",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-06/permuted_true",
+      "base": "code-06",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00011",
+            "00101",
+            "10010",
+            "10100"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-06/false_distance",
+      "base": "code-06",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "01001",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-06/false_count",
+      "base": "code-06",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "01001",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-07/true",
+      "base": "code-07",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "010101",
+            "011001",
+            "011100",
+            "110001",
+            "110010"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-07/permuted_true",
+      "base": "code-07",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "010011",
+            "100011",
+            "001110",
+            "100110",
+            "101010"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-07/false_distance",
+      "base": "code-07",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "010101",
+            "011001",
+            "011100",
+            "110001",
+            "110010"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-07/false_count",
+      "base": "code-07",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "010101",
+            "011001",
+            "011100",
+            "110001",
+            "110010"
+          ]
+        },
+        "claim": {
+          "count": 6,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-08/true",
+      "base": "code-08",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000010",
+            "0001000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-08/permuted_true",
+      "base": "code-08",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0001000",
+            "0100000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-08/false_distance",
+      "base": "code-08",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000010",
+            "0001000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-08/false_count",
+      "base": "code-08",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000010",
+            "0001000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-09/true",
+      "base": "code-09",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01111011",
+            "10111101",
+            "11111010"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-09/permuted_true",
+      "base": "code-09",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01011111",
+            "10111101",
+            "11011110"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-09/false_distance",
+      "base": "code-09",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01111011",
+            "10111101",
+            "11111010"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 6,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-09/false_count",
+      "base": "code-09",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01111011",
+            "10111101",
+            "11111010"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-10/true",
+      "base": "code-10",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0001",
+            "0010",
+            "0100",
+            "1000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-10/permuted_true",
+      "base": "code-10",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0001",
+            "0010",
+            "0100",
+            "1000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-10/false_distance",
+      "base": "code-10",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0001",
+            "0010",
+            "0100",
+            "1000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 1,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-10/false_count",
+      "base": "code-10",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0001",
+            "0010",
+            "0100",
+            "1000"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-11/true",
+      "base": "code-11",
+      "split": "development",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "01111",
+            "10111",
+            "11011",
+            "11101",
+            "11110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-11/permuted_true",
+      "base": "code-11",
+      "split": "development",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "01111",
+            "10111",
+            "11011",
+            "11101",
+            "11110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-11/false_distance",
+      "base": "code-11",
+      "split": "development",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "01111",
+            "10111",
+            "11011",
+            "11101",
+            "11110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 4,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-11/false_count",
+      "base": "code-11",
+      "split": "development",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "01111",
+            "10111",
+            "11011",
+            "11101",
+            "11110"
+          ]
+        },
+        "claim": {
+          "count": 6,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-12/true",
+      "base": "code-12",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "110111",
+            "111110"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-12/permuted_true",
+      "base": "code-12",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011111",
+            "111011"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-12/false_distance",
+      "base": "code-12",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "110111",
+            "111110"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 5,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-12/false_count",
+      "base": "code-12",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "110111",
+            "111110"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-13/true",
+      "base": "code-13",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000111",
+            "0010101",
+            "0100011"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-13/permuted_true",
+      "base": "code-13",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1100010",
+            "1010100",
+            "1110000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-13/false_distance",
+      "base": "code-13",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000111",
+            "0010101",
+            "0100011"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-13/false_count",
+      "base": "code-13",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0000111",
+            "0010101",
+            "0100011"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-14/true",
+      "base": "code-14",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "00011101",
+            "00110011",
+            "01010101",
+            "10001110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-14/permuted_true",
+      "base": "code-14",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01110001",
+            "10101010",
+            "11001100",
+            "10111000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-14/false_distance",
+      "base": "code-14",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "00011101",
+            "00110011",
+            "01010101",
+            "10001110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 4,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-14/false_count",
+      "base": "code-14",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "00011101",
+            "00110011",
+            "01010101",
+            "10001110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 4,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-15/true",
+      "base": "code-15",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0111",
+            "1011",
+            "1101",
+            "1110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-15/permuted_true",
+      "base": "code-15",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0111",
+            "1011",
+            "1101",
+            "1110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-15/false_distance",
+      "base": "code-15",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0111",
+            "1011",
+            "1101",
+            "1110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-15/false_count",
+      "base": "code-15",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0111",
+            "1011",
+            "1101",
+            "1110"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-16/true",
+      "base": "code-16",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00010",
+            "10000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-16/permuted_true",
+      "base": "code-16",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00001",
+            "01000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-16/false_distance",
+      "base": "code-16",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00010",
+            "10000"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 1,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-16/false_count",
+      "base": "code-16",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00010",
+            "10000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-17/true",
+      "base": "code-17",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011010",
+            "101100",
+            "111000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-17/permuted_true",
+      "base": "code-17",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "000111",
+            "001101",
+            "010110"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-17/false_distance",
+      "base": "code-17",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011010",
+            "101100",
+            "111000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-17/false_count",
+      "base": "code-17",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011010",
+            "101100",
+            "111000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-18/true",
+      "base": "code-18",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0111111",
+            "1101111",
+            "1111011",
+            "1111101"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-18/permuted_true",
+      "base": "code-18",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1011111",
+            "1101111",
+            "1111011",
+            "1111110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-18/false_distance",
+      "base": "code-18",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0111111",
+            "1101111",
+            "1111011",
+            "1111101"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 6,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-18/false_count",
+      "base": "code-18",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0111111",
+            "1101111",
+            "1111011",
+            "1111101"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 6,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-19/true",
+      "base": "code-19",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "10010111",
+            "10011110",
+            "10110110",
+            "10111100",
+            "11110010"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-19/permuted_true",
+      "base": "code-19",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "01001111",
+            "00111101",
+            "01101101",
+            "01111001",
+            "11101001"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-19/false_distance",
+      "base": "code-19",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "10010111",
+            "10011110",
+            "10110110",
+            "10111100",
+            "11110010"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 5,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-19/false_count",
+      "base": "code-19",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 8,
+          "words": [
+            "10010111",
+            "10011110",
+            "10110110",
+            "10111100",
+            "11110010"
+          ]
+        },
+        "claim": {
+          "count": 6,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-20/true",
+      "base": "code-20",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-20/permuted_true",
+      "base": "code-20",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0110",
+            "1100"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-20/false_distance",
+      "base": "code-20",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110"
+          ]
+        },
+        "claim": {
+          "count": 2,
+          "weight": 2,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-20/false_count",
+      "base": "code-20",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 4,
+          "words": [
+            "0011",
+            "0110"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-21/true",
+      "base": "code-21",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-21/permuted_true",
+      "base": "code-21",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00011",
+            "00101",
+            "10100"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-21/false_distance",
+      "base": "code-21",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 3,
+          "weight": 2,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-21/false_count",
+      "base": "code-21",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 5,
+          "words": [
+            "00101",
+            "10100",
+            "11000"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 2,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-22/true",
+      "base": "code-22",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011111",
+            "110111",
+            "111011",
+            "111101"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-22/permuted_true",
+      "base": "code-22",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "101111",
+            "110111",
+            "111011",
+            "111110"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-22/false_distance",
+      "base": "code-22",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011111",
+            "110111",
+            "111011",
+            "111101"
+          ]
+        },
+        "claim": {
+          "count": 4,
+          "weight": 5,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-22/false_count",
+      "base": "code-22",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 6,
+          "words": [
+            "011111",
+            "110111",
+            "111011",
+            "111101"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 5,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-23/true",
+      "base": "code-23",
+      "split": "regression",
+      "variant": "true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0001101",
+            "0010011",
+            "0100101",
+            "1001100",
+            "1010001"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-23/permuted_true",
+      "base": "code-23",
+      "split": "regression",
+      "variant": "permuted_true",
+      "expected": true,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "1000101",
+            "0011001",
+            "1010010",
+            "1100100",
+            "1011000"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "id": "code-23/false_distance",
+      "base": "code-23",
+      "split": "regression",
+      "variant": "false_distance",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0001101",
+            "0010011",
+            "0100101",
+            "1001100",
+            "1010001"
+          ]
+        },
+        "claim": {
+          "count": 5,
+          "weight": 3,
+          "distance": 3
+        }
+      }
+    },
+    {
+      "id": "code-23/false_count",
+      "base": "code-23",
+      "split": "regression",
+      "variant": "false_count",
+      "expected": false,
+      "input": {
+        "family": "code",
+        "object": {
+          "length": 7,
+          "words": [
+            "0001101",
+            "0010011",
+            "0100101",
+            "1001100",
+            "1010001"
+          ]
+        },
+        "claim": {
+          "count": 6,
+          "weight": 3,
+          "distance": 2
+        }
+      }
+    }
+  ]
+}
