@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "claim": {
+    "id": "SYNTHETIC-ONLY",
+    "text": "A hypothetical intervention changes the fixture outcome."
+  },
+  "preregistered_prediction": {
+    "text": "The intervention arm has a different outcome from sham on held-out groups.",
+    "registration_reference": {
+      "id": "fixture:registration",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "registered_at": "2026-01-01T00:00:00Z",
+    "first_outcome_observed_at": "2026-01-02T00:00:00Z"
+  },
+  "heldout_split": {
+    "development_group_ids": [
+      "dev-1"
+    ],
+    "heldout_group_ids": [
+      "heldout-1",
+      "heldout-2"
+    ],
+    "grouping_policy": "Keep each base and every derivative in one group.",
+    "independence": "declared",
+    "independence_reference": {
+      "id": "fixture:split-protocol",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "interventions": {
+    "protocol_reference": {
+      "id": "fixture:intervention-protocol",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "assignment_reference": {
+      "id": "fixture:assignment",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "records": [
+      {
+        "id": "run-1",
+        "arm": "intervention",
+        "heldout_group_id": "heldout-1",
+        "execution": "COMPLETED",
+        "outcome_reference": {
+          "id": "fixture:intervention-outcome",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      {
+        "id": "run-2",
+        "arm": "sham",
+        "heldout_group_id": "heldout-2",
+        "execution": "COMPLETED",
+        "outcome_reference": {
+          "id": "fixture:sham-outcome",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    ]
+  },
+  "counterexamples": {
+    "search_reference": {
+      "id": "fixture:counterexample-search",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "outcome": "found",
+    "records": [
+      {
+        "id": "counterexample-1",
+        "description": "Synthetic exception retained for audit.",
+        "evidence_reference": {
+          "id": "fixture:counterexample",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    ]
+  },
+  "scope": {
+    "in_scope": [
+      "Synthetic documentation contract tests."
+    ],
+    "out_of_scope": [
+      "Scientific validation or use as production gate."
+    ],
+    "limitations": [
+      "Every reference and all reported observations in this example are fabricated fixtures."
+    ]
+  }
+}
