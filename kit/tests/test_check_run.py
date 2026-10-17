@@ -580,6 +580,20 @@ class PackageBoundaries(Base):
         with mock.patch.object(check_run, "is_text", side_effect=guarded_is_text):
             self.assertFail("outbox holds only package folders", self.W)
 
+    def test_hidden_regular_outbox_files_are_skipped(self):
+        self.attack()
+        os.makedirs(os.path.join(self.W, "outbox"), exist_ok=True)
+        with open(os.path.join(self.W, "outbox", ".DS_Store"), "wb") as f:
+            f.write(b"\x00\x00\x00\x01Bud1" + b"\x00" * 64)
+        w(os.path.join(self.W, "outbox", ".notes.txt"), "synthetic local note\n")
+        self.assertPass(self.W)
+
+    def test_hidden_regular_outbox_file_is_still_secret_scanned(self):
+        self.attack()
+        w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
+        w(os.path.join(self.W, "outbox", ".notes.txt"), PLAINTEXT + "\n")
+        self.assertFail("outbox/.notes.txt contains text from", self.W)
+
     def test_nonaffirmative_checker_terminal_lines_fail(self):
         for terminal in ("NOT PASS", "PASS: 0", "BYPASS", "PASS FAIL"):
             with self.subTest(terminal=terminal):
@@ -604,12 +618,34 @@ class ConfirmationGates(Base):
     def test_duplicate_panel_decisions_rejected(self):
         P = self.package()
         for fields in ("novelty: complete\nnovelty: PENDING STATUS CHECK\n",
-                       "pass: false\n", "context: same session\n"):
+                       "context: same session\n"):
             with self.subTest(fields=fields):
                 w(os.path.join(P, "panel", "novelty.md"),
                   "context: subagent\n" + fields + "pass: true\n")
                 self.sums(P)
                 self.assertFail("duplicate critical field", "--package", P)
+
+    def test_only_final_pass_line_decides(self):
+        # Published panels quote checker transcripts and prose ("Pass: the object meets ...").
+        # As on main, only the last nonempty line is the verdict; earlier "pass:" lines are not.
+        P = self.package()
+        quoted = ("Pass: the object meets the stated criterion.\n"
+                  "```\n$ sh verify-it-yourself/run_checks.sh\npass: true\nPASS: all saved-object checks\n```\n"
+                  "    pass: true\n")
+        scope = "confirmed_scope: one cell, exactly as reproduced.\n"
+        for role in check_run.PANEL:
+            for body, final, ok in ((quoted, "pass: true", True), ("pass: false\n", "pass: true", True),
+                                    (quoted, "pass: false", False)):
+                with self.subTest(role=role, body=body[:12], final=final):
+                    panel(os.path.join(P, "panel"))
+                    w(os.path.join(P, "panel", role + ".md"), "# %s\ncontext: subagent\n%s%s%s\n"
+                      % (role, scope if role == "criterion" else "", body, final))
+                    self.sums(P)
+                    if ok:
+                        self.assertPass("--package", P, "--no-exec")
+                        self.assertNotIn("duplicate critical field", self.out)
+                    else:
+                        self.assertFail("%s.md does not end with 'pass: true'" % role, "--package", P, "--no-exec")
 
     def test_duplicate_null_decisions_rejected(self):
         path = os.path.join(self.R, "null_test.md")
@@ -663,6 +699,49 @@ class ConfirmationGates(Base):
             with self.subTest(status=status):
                 w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nsha256: %s\n%s\n" % (digest, status))
                 self.assertPass(self.W)
+
+    def test_explicit_http_field_takes_precedence_over_generic_status(self):
+        self.attack()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        for fields, ok in (("status: open\nhttp_status: 200", True), ("status: open\nhttp_code: 200", True),
+                           ("http_status: 200 OK\nstatus: open", True), ("status: open\nhttp_status: 404", False),
+                           ("status: 200\nhttp_status: 503", False), ("status: open", False)):
+            with self.subTest(fields=fields):
+                w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nsha256: %s\n%s\n" % (digest, fields))
+                if ok:
+                    self.assertPass(self.W)
+                else:
+                    self.assertFail("scout.md needs the status source's URL, HTTP status and page sha256", self.W)
+
+    def test_confirmed_run_accepts_http_status_next_to_target_status(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nstatus: open\nhttp_status: 200\nsha256: %s\n" % digest)
+        self.assertPass(self.W, "--no-exec")
+        self.assertIn("CONFIRMED status backed by three panel files", self.out)
+
+    def test_nonexact_confirmed_gate_status_warns(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        for status in ("CONFIRMED_PARTIAL (pending table check)", "NOT_CONFIRMED_SOLUTION",
+                       "confirmed_partial", "CONFIRMED_"):
+            with self.subTest(status=status):
+                panel(os.path.join(self.R, "panel"), gate_status=status)
+                self.assertPass(self.W)
+                self.assertIn("is not exactly CONFIRMED_SOLUTION or CONFIRMED_PARTIAL", self.out)
+                self.assertIn("claim present, not confirmed", self.out)
+
+    def test_exact_or_unconfirmed_gate_status_does_not_warn(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"), gate_status="PROMISING")
+        self.assertPass(self.W)
+        self.assertNotIn("is not exactly CONFIRMED_", self.out)
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        self.assertPass(self.W, "--no-exec")
+        self.assertNotIn("is not exactly CONFIRMED_", self.out)
+        self.assertIn("CONFIRMED status backed by three panel files", self.out)
 
     def test_pending_novelty_cannot_confirm_package(self):
         P = self.package()

@@ -118,7 +118,12 @@ class PackageManifest(fixtures.Base):
     @unittest.skipIf(os.name == 'nt', 'non-UTF-8 filename bytes require POSIX')
     def test_actual_non_utf8_filename_bytes_remain_distinct(self):
         name = os.fsencode(self.P) + b'/object/bad\xffname'
-        with open(name, 'wb') as f:
+        try:
+            f = open(name, 'wb')
+        except OSError as e:
+            # macOS APFS refuses non-UTF-8 names (EILSEQ); a sandbox may refuse them first (EPERM).
+            self.skipTest('this filesystem refuses non-UTF-8 filename bytes (errno %s: %s)' % (e.errno, e.strerror))
+        with f:
             f.write(b'synthetic')
         digest = hashlib.sha256(b'synthetic').hexdigest().encode('ascii')
         self.manifest.write_bytes(self.original.encode('utf-8') + digest + b'  object/bad\xffname\n')

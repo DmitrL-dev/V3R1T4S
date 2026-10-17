@@ -30,6 +30,6 @@ Tests cover wrong-then-correct duplicate hashes, normalized aliases, malformed r
 
 ## Limits and integration
 
-This verifies local package inventory and checksums, not authenticity, scientific validity, or a malicious contributor's honesty. It provides no security sandbox or TOCTOU/concurrent-filesystem-mutation guarantee. Original-path resolution relies on the existing static symlink-free preflight boundary. Non-UTF-8 filename tests are POSIX-specific and skip on Windows; runtime validation here used Linux/Python 3.12.
+This verifies local package inventory and checksums, not authenticity, scientific validity, or a malicious contributor's honesty. It provides no security sandbox or TOCTOU/concurrent-filesystem-mutation guarantee. Original-path resolution relies on the existing static symlink-free preflight boundary. Non-UTF-8 filename tests are POSIX-specific and skip on Windows and on filesystems that refuse such names (macOS APFS raises EILSEQ); runtime validation here used Linux/Python 3.12.
 
 Before integration, maintainers must reconcile the maintainer-owned root `SHA256SUMS` against the complete final tree, checking both path coverage (including this README and new test) and every digest. The root manifest is intentionally unchanged in this draft; local test success is not remote CI or release qualification.

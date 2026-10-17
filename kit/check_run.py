@@ -118,6 +118,14 @@ def walk(root, skip_dirs=()):
             yield os.path.join(d, f)
 
 
+def regular_file_no_follow(path):
+    """True for a regular file, judged by lstat (a symbolic link is never a regular file here)."""
+    try:
+        return stat.S_ISREG(os.lstat(path).st_mode)
+    except OSError:
+        return False
+
+
 def rel(path, base):
     try:
         return os.path.relpath(path, base)
@@ -152,11 +160,17 @@ def critical_kv(c, text, label, keys):
 
 
 def successful_http_status(text):
-    """Read explicit HTTP evidence, never incidental numbers elsewhere in a scout."""
-    named = []
+    """Read explicit HTTP evidence, never incidental numbers elsewhere in a scout.
+
+    http_status/http_code fields take precedence: when present, a generic 'status:' field
+    (often the target's own status, such as 'open') is not read as HTTP evidence."""
+    explicit, generic = [], []
     for line in text.splitlines():
         d = kv(line)
-        named.extend(d[k] for k in ("status", "http_status", "http_code") if k in d)
+        explicit.extend(d[k] for k in ("http_status", "http_code") if k in d)
+        if "status" in d:
+            generic.append(d["status"])
+    named = explicit or generic
     if named:
         codes = [re.fullmatch(r"([0-9]{3})(?:\s+[A-Za-z][A-Za-z -]*)?", value) for value in named]
         return all(m and 200 <= int(m.group(1)) < 300 for m in codes)
@@ -233,7 +247,9 @@ def check_panel(c, panel_dir, label, require_confirmed=True):
         t = read(p)
         texts.append(t)
         before = len(c.fails)
-        fields = critical_kv(c, t, "%s: %s.md" % (label, role), {"context", "pass", "novelty"})
+        # The verdict is the file's final line alone (checked below). Earlier "pass:" lines, such as
+        # transcripts in code blocks or prose like "Pass: the object meets ...", are not decisions.
+        fields = critical_kv(c, t, "%s: %s.md" % (label, role), {"context", "novelty"})
         if len(c.fails) != before:
             good = False
         if last_nonempty(t).lower().replace(" ", "") != "pass:true":
@@ -894,6 +910,10 @@ def check_run_dir(c, workdir, run, bank, dry):
     panel_dir = os.path.join(run, "panel")
     gate = critical_kv(c, read(os.path.join(panel_dir, "gate.md")),
                        "%s: gate.md" % label, {"status", "confirmed_scope"})
+    gate_status = gate.get("status", "")
+    if re.search(r"(?i)CONFIRMED_", gate_status) and gate_status not in CONFIRMED_STATUSES:
+        c.warn("%s: panel/gate.md status '%s' is not exactly CONFIRMED_SOLUTION or CONFIRMED_PARTIAL, "
+               "so the run is not treated as confirmed" % (label, gate_status[:60]))
     has_claim = any(x in ("partial_win_claim", "solution_claim") for x in claim_levels) or \
         os.path.isdir(os.path.join(run, "claim")) or bool(gate) or \
         (tid and os.path.isdir(os.path.join(workdir, "private", tid, "claim")))
@@ -982,6 +1002,8 @@ def check_workspace(c, workdir, run=None, setup_only=False, execute=True, timeou
     if os.path.isdir(ob):
         for d in sorted(os.listdir(ob)):
             p = os.path.join(ob, d)
+            if d.startswith(".") and regular_file_no_follow(p):
+                continue  # e.g. .DS_Store: not a package; the secret scan below still reads text files
             if os.path.isdir(p) or p.endswith(".md"):
                 if check_package(c, p, workdir, execute=execute, timeout=timeout) is False:
                     unsafe_packages.append(p)
