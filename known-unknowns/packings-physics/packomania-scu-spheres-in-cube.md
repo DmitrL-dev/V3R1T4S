@@ -4,7 +4,7 @@
 
 ## The problem
 
-Packomania's 'spheres in a cube' table (scu) lists the best known radius r(N) of N equal spheres in the unit cube, complete for N = 1..1000 plus lattice rows up to N = 1024192 (1134 rows; txt/radius.txt at 30 decimals; per-N coordinates scu/txt/scu<N>.txt). Proven only for N <= 10 and a few more. The table is being revised right now: 04-Oct-2026 Specht posted 2022 Lai-Hao-Xiao-Glover candidates for ~60 values of N and wrote 'This table needs a revision!'; 05-Oct-2026 Yuan Gao (Harvard) set ~80 records in 202..576; 06-Oct and 08-Oct-2026 Lu Peng set ~185 records across 102..946. Author file: Goldberg (1971) still holds 263 rows, Cantrell 233, Specht 241, meaning hundreds of rows are 1970s-2012 constructions. scu is NOT in the pending-requests list of 2026-10-08 (but a 'many: 4666 candidates' bundle from Moki & Julio of 26-Sep-2026 is unspecified).
+Packomania's 'spheres in a cube' table (scu) lists the best known radius r(N) of N equal spheres in the unit cube, complete for N = 1..1000 plus lattice rows up to N = 1024192 (1134 rows in txt/radius.txt, at 30 decimals until the 17-Oct-2026 reorganization and at 12 decimals since then, except the 76 largest lattice rows, N >= 70304; per-N coordinates scu/txt/scu<N>.txt). Proven only for N <= 10 and a few more. The table is being revised right now: 04-Oct-2026 Specht posted 2022 Lai-Hao-Xiao-Glover candidates for ~60 values of N and wrote 'This table needs a revision!'; 05-Oct-2026 Yuan Gao (Harvard) set ~80 records in 202..576; 06-Oct and 08-Oct-2026 Lu Peng set ~185 records across 102..946; on 17-Oct-2026 Lu Peng (285 N in 95..883) and Vidit Patankar (40 N in 101..1596) added more, and the table was reorganized. Author file: Goldberg (1971) still holds 263 rows, Cantrell 233, Specht 241, meaning hundreds of rows are 1970s-2012 constructions. scu is NOT in the pending-requests list of 2026-10-08 (but a 'many: 4666 candidates' bundle from Moki & Julio of 26-Sep-2026 is unspecified).
 
 ## What counts as a win
 
@@ -54,6 +54,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Noise in the 30th decimal is not a record; the 1e-11 margin on the mpmath feasible radius is mandatory.
 - Unspecified 'many' bundle (4666 candidates, Moki & Julio) might contain scu; a record may be scooped in the queue, so the novelty skeptic must check pending-requests.html and the per-N page.
 - Email submission requires explicit permission from the human and is asked to pause in October 2026.
+- Since the 17-Oct-2026 reorganization the coordinate files list N-1 centres. In scu_coords.tar.gz (sha256 ed1760a3...57c7, Last-Modified 17 Oct 2026 19:37 GMT, seen 2026-10-18) every scu<N>.txt for N <= 1000 and 58 of the 134 lattice files give no coordinates on the row for index N, and the 76 largest lattice files (N >= 70304) hold only the radius. The N-1 listed centres still reach the table radius (998 of 998 files with at least two centres, within 1e-9), so a parser check passes on an incomplete configuration, while the non-isometry clause needs all N centres. An export earlier that day (archive 6c15d5db...) lacked the first centre instead.
 
 ## Point your agent at it
 
