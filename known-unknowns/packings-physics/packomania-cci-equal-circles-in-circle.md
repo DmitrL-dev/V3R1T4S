@@ -4,7 +4,7 @@
 
 ## The problem
 
-Packomania's 'circles in a circle' table (cci) lists the best known radius r(N) of N equal circles packed in the unit circle for every N = 1..2600 plus selected larger N up to 5000 (2735 rows). Only N <= 13 and N = 19 are proven; everything else is a putative record. Last table update 25-Dec-2024 (Basurto/Gurin/Odriozola/Specht); earlier waves by Lai-Hao et al. (2023-2024) and Zhou-He-Zheng-Li (2023). The cci category does NOT appear in Packomania's pending-requests list of 2026-10-08, so the live table is the actual frontier for this container. Per-N values are machine-readable (txt/radius.txt, 30 decimals) and per-N coordinates are at cci/txt/cci<N>.txt (30 decimals).
+Packomania's 'circles in a circle' table (cci) lists the best known radius r(N) of N equal circles packed in the unit circle for every N = 1..2600 plus selected larger N up to 5000 (2735 rows). Only N <= 13 and N = 19 are proven; everything else is a putative record (the cci.html history of 11-Oct-2026 adds an announcement of two computer-assisted proofs for N = 15 by Zii Fave). Last table update 25-Dec-2024 (Basurto/Gurin/Odriozola/Specht); earlier waves by Lai-Hao et al. (2023-2024) and Zhou-He-Zheng-Li (2023). The cci category did not appear in Packomania's pending-requests list of 2026-10-08; the list of 17-Oct-2026 has 193 cci candidates in 652..3943 (Vidit Patankar, 15-Oct-2026), so for those N the live table may not be the frontier. Per-N values are machine-readable (txt/radius.txt, 30 decimals except 356 rows in N = 128..1000 that carry 12) and per-N coordinates are at cci/txt/cci<N>.txt (30 decimals in cci100.txt, but 12 in cci128.txt, one of the 12-decimal rows).
 
 ## What counts as a win
 
@@ -51,7 +51,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 
 - Direction and normalization: cci fixes the container radius at 1 and maximizes r; some literature reports the container radius for unit circles (ratio = 1/r). Compare r to r, never ratio to r.
 - Double-precision 'records' of +1e-13 are noise. The 1e-11 margin on the mpmath feasible radius is mandatory; a configuration with tiny overlaps that 'rounds' to a record is a false positive.
-- Stale-table trap: Packomania has a queue of over 5,000 pending candidates (2026-10-08). cci is not in the queue today, but re-check pending-requests.html and the per-N page immediately before claiming.
+- Stale-table trap: Packomania has a queue of over 5,000 pending candidates (2026-10-08). cci was not in the queue on 2026-10-08, but the 17-Oct-2026 list has 193 cci candidates in 652..3943; re-check pending-requests.html and the per-N page immediately before claiming.
 - Known-literature trap: an improvement may already be published (Lai-Hao 2024, Basurto 2024) but not yet uploaded; search arXiv for the N before claiming.
 - Submitting to Packomania is by email (an outbound message on the human's behalf) and is asked not to happen in October 2026; claim the verified construction, not a submission.
 

@@ -4,7 +4,7 @@
 
 ## The problem
 
-Packomania's 'circles in a square' table (csq) lists the best known radius r(N) of N equal circles in the unit square for N = 1..1000 and selected N up to 10000 (3150 rows, 12-decimal radius.txt, per-N coordinates at csq/txt/csq<N>.txt). Proven optimal only for N <= 30 and a few special N (36 etc.). Last update 10-Sep-2026 (two candidates N = 3000 and 9996 by ZeroThesis); the big 2022 wave by Lai-Hao-Xiao-Glover improved ~250 values of N in 106..400. IMPORTANT: the pending-requests page (2026-10-08) lists 557 csq candidates in 401..1000 and 250 in 1015..9996 (Zeeshan Tariq, Sept 2026) that are not yet processed, so the live table for N > 400 is probably about to move.
+Packomania's 'circles in a square' table (csq) lists the best known radius r(N) of N equal circles in the unit square for N = 1..1000 except 49 N in 786..1000 (no row on csq.html or in txt/radius.txt, 2026-10-18) and selected N up to 10000 (3147 rows, 12-decimal radius.txt, per-N coordinates at csq/txt/csq<N>.txt). Proven optimal only for N <= 30 and a few special N (36 etc.). Last update 10-Sep-2026 (two candidates N = 3000 and 9996 by ZeroThesis); the big 2022 wave by Lai-Hao-Xiao-Glover improved ~250 values of N in 106..400. IMPORTANT: the pending-requests page (2026-10-08) lists 557 csq candidates in 401..1000 and 250 in 1015..9996 (Zeeshan Tariq, Sept 2026) that are not yet processed, and its 17-Oct-2026 version adds 1813 candidates in 501..9984 (Vidit Patankar, 15-Oct-2026), so the live table for N > 400 is probably about to move.
 
 ## What counts as a win
 
@@ -50,7 +50,7 @@ Starting points, not instructions. The best wins came from angles nobody listed.
 
 False wins others have fallen for. A claim that walks into one of these will not survive the skeptics.
 
-- Queue-stale table: 807 csq candidates are pending (N > 400). A 'record' for N in those ranges may already be in Specht's inbox; the criterion forces N <= 400 or an explicit queue check.
+- Queue-stale table: 2620 csq candidates are pending (N > 400): the 807 listed on 2026-10-08 and 1813 more on the 17-Oct-2026 list. A 'record' for N in those ranges may already be in Specht's inbox; the criterion forces N <= 400 or an explicit queue check.
 - 12-decimal table: an apparent improvement in the 12th decimal can be the table's own rounding (Packomania truncates to 12 decimals on csq); require the 1e-11 margin against the exact posted value and prefer re-deriving the table radius from the posted coordinates (csq<N>.txt) in mpmath.
 - Coordinate convention: Packomania files are centered at the origin with side length 1 (coordinates in [-0.5, 0.5]); do not test containment against [0, 1] without shifting.
 - Submission is by email and asked to pause in October 2026; do not count a submission as a claim.
