@@ -2,7 +2,7 @@
 
 Run from the repository root:
 
-    python3 known-knowns/tests/harness_contracts/run_regressions.py --output /tmp/veritas-harness-results
+    python3 known-knowns/tests/harness_contracts/run_regressions.py --output known-knowns/tests/harness_contracts/results-local
 
 Requires Python 3.9+, a POSIX shell and ordinary coreutils. No scientific packages
 or compiler are needed. All scientific commands are deterministic test doubles;

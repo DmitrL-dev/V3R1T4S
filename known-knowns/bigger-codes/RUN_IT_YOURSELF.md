@@ -77,7 +77,7 @@ For lightweight orchestration regressions from the repository root (Python 3.9+,
 no scientific dependencies, downloads, or compiler):
 
 ```sh
-python3 known-knowns/tests/harness_contracts/run_regressions.py --output /tmp/veritas-harness-results
+python3 known-knowns/tests/harness_contracts/run_regressions.py --output known-knowns/tests/harness_contracts/results-local
 ```
 
 These tests mock scientific commands and execute only the standard-library
