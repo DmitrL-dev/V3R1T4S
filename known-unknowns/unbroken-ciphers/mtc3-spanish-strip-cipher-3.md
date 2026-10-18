@@ -6,7 +6,7 @@
 
 ## The problem
 
-An original Spanish Civil War telegram (summer or fall 1936), apparently encrypted with the Spanish Strip Cipher (SSC): a homophonic substitution where a keyword-derived, shifted random alphabet assigns each plaintext letter to a column of 3-5 two-digit homophones; the challenge hint allows an alphabet that includes LL and CH and may omit W. The ciphertext is 142 two-digit tokens with 55 distinct values (range 02-98). The plaintext is most likely Spanish, possibly Basque. MTC3 Level X (published 2014-03-27) lists 0 solvers.
+An original Spanish Civil War telegram (summer or fall 1936), apparently encrypted with the Spanish Strip Cipher (SSC): a homophonic substitution where a keyword-derived, shifted random alphabet assigns each plaintext letter to a column of 3-5 two-digit homophones; the challenge hint allows an alphabet that includes LL and CH and may omit W. The ciphertext is 142 two-digit tokens with 55 distinct values (range 02-98). The plaintext is most likely Spanish, possibly Basque. MTC3 Level X (published 2014-03-27) lists 0 solvers. On 2026-10-18 the challenge text opens with the notice '[IMPORTANT: As of July 2026, no new solutions are accepted. We try to verify existing submissions.]', and the level page still shows 0 solves.
 
 ## What counts as a win
 
