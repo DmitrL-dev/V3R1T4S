@@ -4,7 +4,7 @@
 
 ## The problem
 
-Packomania Section 4 lists the best known radius r(N) of N equal d-dimensional balls packed in the unit d-ball for d = 4 (N = 2..300), d = 5 (N = 2..300) and d = 6 (N = 2..259), with 12-decimal txt/radius.txt files and per-N coordinates inside txt/hsp<d>_coords.tar.gz (files hsp<d>-<N>.txt: first line radius, then N rows of d coordinates, 12 decimals). Last updates: hsp4 06-Jul-2025, hsp5 01-Aug-2025, hsp6 31-Jul-2025. Author files show these tables were built almost single-handedly by Specht (hsp4: 247/299 rows Specht, 30 Sloane-Hardin-Smith, 11 Mackay; hsp5: 263/299 Specht; hsp6: 258/258 Specht). None of hsp4/5/6 appears in the pending-requests list (2026-10-08), and no competing group has touched them, so these are the least-contested per-N packing tables on Packomania.
+Packomania Section 4 lists the best known radius r(N) of N equal d-dimensional balls packed in the unit d-ball for d = 4 (N = 2..300), d = 5 (N = 2..300) and d = 6 (N = 2..259), with 12-decimal txt/radius.txt files and per-N coordinates inside txt/hsp<d>_coords.tar.gz (files hsp<d>-<N>.txt: first line radius, then N rows of an index and coordinates, 12 decimals). As of 2026-10-18 only the hsp4 files are complete: every hsp5 and hsp6 row carries 4 coordinates, not 5 or 6, and hsp6 has no file for N = 251-259. Last updates: hsp4 06-Jul-2025, hsp5 01-Aug-2025, hsp6 31-Jul-2025. Author files show these tables were built almost single-handedly by Specht (hsp4: 247/299 rows Specht, 30 Sloane-Hardin-Smith, 11 Mackay; hsp5: 263/299 Specht; hsp6: 258/258 Specht). None of hsp4/5/6 appears in the pending-requests list (2026-10-08), and no competing group has touched them, so these are the least-contested per-N packing tables on Packomania.
 
 ## What counts as a win
 
@@ -58,6 +58,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - A new packing isometric to the posted one (rotated/reflected) with the same r is not a record; the checker compares distance multisets.
 - Email submission needs explicit permission from the human and Packomania asks for no submissions in October 2026; claim the verified configuration only.
 - Tables are 12-decimal: polishing the posted coordinates to high precision can gain up to ~1e-12 from rounding alone; that is why the margin is 1e-10 and the non-isometry test is mandatory.
+- The posted hsp5/hsp6 coordinates cannot serve the parser check or the non-isometry clause. In hsp5_coords.tar.gz (sha256 e3a7316a...20e5) and hsp6_coords.tar.gz (d36917c4...d15d), unchanged from 2026-10-16 to 2026-10-18, every row of all 299 hsp5 and 249 hsp6 files is an index plus 4 numbers; the radius they give is below the header radius in every file except hsp5 N = 7 and 8 (never above), as if the last coordinates were dropped. hsp6 N = 251-259 are listed in radius.txt but have no file (HTTP 404). The 299 hsp4 files reproduce their header radii within 1e-9.
 
 ## Point your agent at it
 
