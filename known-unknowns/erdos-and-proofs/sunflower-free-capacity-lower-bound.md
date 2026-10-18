@@ -4,7 +4,7 @@
 
 ## The problem
 
-Let f(n) be the largest family of subsets of [n] with no 3-sunflower, i.e. no three distinct sets with pairwise equal intersections (three pairwise disjoint sets count, with empty core). mu = lim f(n)^{1/n}. Published lower bound: >1.551 (Deuber-Erdos-Gunderson-Kostochka-Meyer 1997, numerical value as stated in FPP2024/TZ2025). An unpublished >= 1.554 is cited in Naslund-Sawin. Upper bound: 3/2^{2/3} ~ 1.88988 (Naslund-Sawin 2017). By the tensor-product lemma proved on the C_49 page, any explicit r-uniform sunflower-free family F in C([n],r) gives mu >= |F|^{1/n}. The lower bound is about 30 years old.
+Let f(n) be the largest family of subsets of [n] with no 3-sunflower, i.e. no three distinct sets with pairwise equal intersections (three pairwise disjoint sets count, with empty core). mu = lim f(n)^{1/n}. Published lower bound: >1.551 (Deuber-Erdos-Gunderson-Kostochka-Meyer 1997, numerical value as stated in FPP2024/TZ2025). An unpublished >= 1.554 is cited in Naslund-Sawin. Upper bound: 3/2^{2/3} ~ 1.88988 (Naslund-Sawin 2017). By the tensor-product lemma proved on the C_49 page, any explicit r-uniform sunflower-free family F in C([n],r) gives mu >= |F|^{1/n}. The published lower bound is about 30 years old; the 49a page (read 2026-10-18) now also lists unverified chain constructions with an exact transfer-matrix count, up to >= 1.5647730 (IRSI2026, github.com/Aspect5/sunflower-free-capacity) and >= 1.5666969 (Cla2026, github.com/joshua17-create/sunflower-lower-bound).
 
 ## What counts as a win
 
@@ -52,7 +52,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Floating-point rounding when comparing |F|^{1/n}.
 - Confusing this with odd-sunflowers (FPP2024) or with k-sunflowers for k > 3.
 - Off-by-one in the threshold: compute ceil(1.5545^n + tiny) with exact integers, do not hand-copy.
-- Comparing against 1.551 when the unpublished 1.554 is the real bar for novelty.
+- Comparing against 1.551 or the unpublished 1.554: on 2026-10-18 the 49a page lists unverified bounds up to 1.5666969 (Cla2026), and by the criterion's rule a listed bound above 1.5545 becomes the bar.
 
 ## Point your agent at it
 

@@ -6359,7 +6359,7 @@
    "kind": "harvest",
    "tractability": 3,
    "compute_profile": "laptop-hours",
-   "statement": "C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007). Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (finite-certified, base 34065 masked digits), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).",
+   "statement": "C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007); the 3a page (read 2026-10-18) also lists, marked unverified, (13524e-7359)/(9451e-3286) = 1.312373302115... (K2026c), the first improvement on 4/3, from an improved two-set sum-difference exponent. Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (finite-certified, base 34065 masked digits), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).",
    "success_criterion": "A construction certified at finite depth (explicit U, or a masked-digit construction with an exact counting certificate) whose value under the 3a page's formula is STRICTLY GREATER (direction: max) than the best lower bound listed on https://github.com/teorth/optimizationproblems/blob/main/constants/3a.md itself (not the README table) AT VERIFICATION TIME, including asterisked limit values, by at least 1e-7, after the verifier re-reads the exact hypotheses of the formula on the 3a page (e.g. 0 in U, nonnegativity, |U-U| < 2max(U)+1). As of 2026-10-03 that value is 1.19519192* (Kleinwaks 2026b).",
    "partial_wins": [
     {
@@ -6400,7 +6400,7 @@
    "kind": "harvest",
    "tractability": 2,
    "compute_profile": "laptop-hours",
-   "statement": "Let f(n) be the largest family of subsets of [n] with no 3-sunflower, i.e. no three distinct sets with pairwise equal intersections (three pairwise disjoint sets count, with empty core). mu = lim f(n)^{1/n}. Published lower bound: >1.551 (Deuber-Erdos-Gunderson-Kostochka-Meyer 1997, numerical value as stated in FPP2024/TZ2025). An unpublished >= 1.554 is cited in Naslund-Sawin. Upper bound: 3/2^{2/3} ~ 1.88988 (Naslund-Sawin 2017). By the tensor-product lemma proved on the C_49 page, any explicit r-uniform sunflower-free family F in C([n],r) gives mu >= |F|^{1/n}. The lower bound is about 30 years old.",
+   "statement": "Let f(n) be the largest family of subsets of [n] with no 3-sunflower, i.e. no three distinct sets with pairwise equal intersections (three pairwise disjoint sets count, with empty core). mu = lim f(n)^{1/n}. Published lower bound: >1.551 (Deuber-Erdos-Gunderson-Kostochka-Meyer 1997, numerical value as stated in FPP2024/TZ2025). An unpublished >= 1.554 is cited in Naslund-Sawin. Upper bound: 3/2^{2/3} ~ 1.88988 (Naslund-Sawin 2017). By the tensor-product lemma proved on the C_49 page, any explicit r-uniform sunflower-free family F in C([n],r) gives mu >= |F|^{1/n}. The published lower bound is about 30 years old; the 49a page (read 2026-10-18) now also lists unverified chain constructions with an exact transfer-matrix count, up to >= 1.5647730 (IRSI2026, github.com/Aspect5/sunflower-free-capacity) and >= 1.5666969 (Cla2026, github.com/joshua17-create/sunflower-lower-bound).",
    "success_criterion": "An explicit (n, r, F) with F a subset of C([n],r), all members distinct and of size exactly r, F 3-sunflower-free (including no three pairwise-disjoint sets), whose rate |F|^{1/n} is STRICTLY GREATER (direction: max) than both the best lower bound listed at https://github.com/teorth/optimizationproblems/blob/main/constants/49a.md AT VERIFICATION TIME and the unpublished 1.554 bound, with margin: |F| > 1.5545^n under exact comparison (integer comparison |F|*10^(4n) > 15545^n). As of 2026-10-03 the page lists >1.551 (DEGKM 1997) and >=1.554 (unpublished); for context the 1.5545 thresholds are n=16: >=1163, n=20: >=6790, n=24: >=39644 (recompute with exact integers, do not hand-copy). If the 49a page lists a bound above 1.5545 at verification time, the bar becomes strictly above that value. Product claims list each uniform base family explicitly, and the verifier checks each base.",
    "partial_wins": [
     {
@@ -6436,7 +6436,7 @@
     "Floating-point rounding when comparing |F|^{1/n}.",
     "Confusing this with odd-sunflowers (FPP2024) or with k-sunflowers for k > 3.",
     "Off-by-one in the threshold: compute ceil(1.5545^n + tiny) with exact integers, do not hand-copy.",
-    "Comparing against 1.551 when the unpublished 1.554 is the real bar for novelty."
+    "Comparing against 1.551 or the unpublished 1.554: on 2026-10-18 the 49a page lists unverified bounds up to 1.5666969 (Cla2026), and by the criterion's rule a listed bound above 1.5545 becomes the bar."
    ]
   },
   {

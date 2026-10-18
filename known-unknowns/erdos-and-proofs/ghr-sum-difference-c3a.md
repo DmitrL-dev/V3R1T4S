@@ -4,7 +4,7 @@
 
 ## The problem
 
-C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007). Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (finite-certified, base 34065 masked digits), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).
+C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007); the 3a page (read 2026-10-18) also lists, marked unverified, (13524e-7359)/(9451e-3286) = 1.312373302115... (K2026c), the first improvement on 4/3, from an improved two-set sum-difference exponent. Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (finite-certified, base 34065 masked digits), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).
 
 ## What counts as a win
 
