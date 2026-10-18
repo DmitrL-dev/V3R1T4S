@@ -4,7 +4,7 @@
 
 ## The problem
 
-A(n,d,w) is the maximum number of binary words of length n and weight w with pairwise Hamming distance >= d. Brouwer's tables (d = 4..18, n up to 28 in the main tables and further for some) list best known lower and upper bounds. A code larger than the tabulated lower bound is a new record. Active as of 2026-10-03. Lysenstoen (arXiv:2607.19550, Jul 2026; values polished further in Brouwer's table) and Echols (arXiv:2608.13906, Aug 2026, 124 improved cells via tabu search). Lower bounds are still being pushed. Brouwer's live cells already carry polished Lysenstoen values (e.g. A(23,6,10) >= 2992, A(23,6,11) >= 3588, A(24,6,8) >= 1859, A(24,6,10) >= 4237), larger than the arXiv abstract's numbers.
+A(n,d,w) is the maximum number of binary words of length n and weight w with pairwise Hamming distance >= d. Brouwer's tables (d = 4..18, n up to 28 in the main tables and further for some) list best known lower and upper bounds. A code larger than the tabulated lower bound is a new record. Active as of 2026-10-03, and the legend adds codes sent in October 2026 (Dzoba 2026-10-09 and 2026-10-15, Freel 2026-10-13; page last modified 17 Oct 2026). Lysenstoen (arXiv:2607.19550, Jul 2026; values polished further in Brouwer's table) and Echols (arXiv:2608.13906, Aug 2026, 124 improved cells via tabu search). Lower bounds are still being pushed. Brouwer's live cells carry polished Lysenstoen values (A(23,6,10) >= 2992, A(23,6,11) >= 3588, A(24,6,10) >= 4237), larger than the arXiv abstract's numbers; his polished A(24,6,8) >= 1859 has since been raised to 1915 by Echols (cell marked E, 2026-10-18).
 
 ## What counts as a win
 

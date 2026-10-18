@@ -4,7 +4,7 @@
 
 ## The problem
 
-Find more unit spheres touching a central unit sphere without overlapping, i.e. a set of nonzero vectors of equal norm with pairwise angle >= 60 degrees, in dimensions 9-23. Cohn's table (2026): d9 306, d10 510, d11 604, d12 841, d13 1154, d14 1932, d15 2564, d16 4320, d17 5730, d18 7654, d19 11948, d20 19448, d21 29768, d22 49896, d23 93150. Attributions: d11 592 (Ganzhinov 2025) -> 593 (AlphaEvolve) -> 604 (Bianchi-Kwon-Pappu-Zou, arXiv:2606.10402, EinsteinArena, 'recently solved, certified'); d12 840 -> 841 (Takhanov-Assylbekov-Yun, arXiv:2606.18984); d14 1932 (Ganzhinov 2025); d19 11948 (Ho, arXiv:2603.10425). Sep 2026 work (arXiv:2609.35051, 2609.21591) only improved d >= 25.
+Find more unit spheres touching a central unit sphere without overlapping, i.e. a set of nonzero vectors of equal norm with pairwise angle >= 60 degrees, in dimensions 9-23. Cohn's table (2026, read 2026-10-18): d9 306, d10 510, d11 604, d12 841, d13 1154, d14 1932, d15 2564, d16 4320, d17 5730, d18 8358, d19 12460, d20 19448, d21 31560, d22 49896, d23 93150. Attributions: d11 592 (Ganzhinov 2025) -> 593 (AlphaEvolve) -> 604 (Bianchi-Kwon-Pappu-Zou, arXiv:2606.10402, EinsteinArena, 'recently solved, certified'); d12 840 -> 841 (Takhanov-Assylbekov-Yun, arXiv:2606.18984); d14 1932 (Ganzhinov 2025); d18 7654 -> 8358 (A. Kravatskiy 2026, github.com/alexlegeartis/KissingNumbers); d19 11948 (Ho, arXiv:2603.10425) -> 12460 and d21 29768 -> 31560 (K. Li 2026, hexagonmath.org/2610.00248); the earlier values are those of 2026-10-03. Sep 2026 work (arXiv:2609.35051, 2609.21591) only improved d >= 25.
 
 ## What counts as a win
 
