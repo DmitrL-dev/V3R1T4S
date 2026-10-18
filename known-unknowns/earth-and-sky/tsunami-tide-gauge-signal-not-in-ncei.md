@@ -53,6 +53,9 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Storm surges and infragravity waves during storms mimic small tsunamis; check weather.
 - NCEI may list the event under a different source time or as a 'questionable' validity code; search with tolerance and all validity codes.
 - Do not report to NCEI or IOC; the claim is a vetted candidate.
+- The +/-10 min arrival rule is tight even for real tsunamis. On NCEI's own tide-gauge rows of definite earthquake tsunamis in 2005-2025 with an NCEI travel time of 15-120 min (298 rows, 81 events), first-arrival times from NCEI's epicentre (second-order fast marching with sqrt(g h) on ETOPO1 at 2 arcmin, gauge snapped to the nearest water cell) differ from NCEI's travel time by more than 10 min for 52% of rows (95% CI 36-67%, bootstrap over events), and for 38% of rows of M < 7.5 sources; 74% are within +/-20 min, and 6 of the 44 events with two or more rows have all rows within +/-10 min. Validate the travel-time model against NCEI arrivals and report its error before scoring.
+- Model travel times depend on the solver and the coast: an 8-neighbour grid graph (Dijkstra) is up to 8.2% too slow depending on direction (about +10 min at 120 min), and gauges snapped to cells shallower than 10 m come out late (median +13 min against NCEI); snapping to depth >= 20 m lowers the median over all rows from +6.7 to +2.3 min. Fix the solver, depth floor and snapping rule before scoring.
+- p3's fraction needs a stated denominator: of the 264 USGS ComCat M >= 6.5, depth <= 70 km earthquakes of 2015-2025 with an epicentre in an ETOPO1 water cell (2 arcmin), 6 have no IOC SLSMF station of any status within 1,500 km and 42 none within 500 km, and an epicentre-in-water rule drops NCEI-listed tsunamis whose epicentres are on land (Kaikoura 2016, Palu 2018). Count quakes without usable open gauge data explicitly.
 
 ## Point your agent at it
 
