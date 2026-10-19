@@ -54,6 +54,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - 12-decimal table: an apparent improvement in the 12th decimal can be the table's own rounding (Packomania truncates to 12 decimals on csq); require the 1e-11 margin against the exact posted value and prefer re-deriving the table radius from the posted coordinates (csq<N>.txt) in mpmath.
 - Coordinate convention: Packomania files are centered at the origin with side length 1 (coordinates in [-0.5, 0.5]); do not test containment against [0, 1] without shifting.
 - Submission is by email and asked to pause in October 2026; do not count a submission as a claim.
+- The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables'). Its csq shelf has 2,345 records at N from 385 to 9996, and the only one at N <= 400 is N = 385, so for a claim at N <= 400 the bundle can matter only at N = 385 (the N list is in RESULTS_TABLE.md at that commit; the count and the timing agree, but the queued zip is not public; checked 2026-10-19).
 
 ## Point your agent at it
 

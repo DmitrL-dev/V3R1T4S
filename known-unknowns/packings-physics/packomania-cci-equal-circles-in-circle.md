@@ -54,6 +54,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Stale-table trap: Packomania has a queue of over 5,000 pending candidates (2026-10-08). cci was not in the queue on 2026-10-08, but the 17-Oct-2026 list has 193 cci candidates in 652..3943; re-check pending-requests.html and the per-N page immediately before claiming.
 - Known-literature trap: an improvement may already be published (Lai-Hao 2024, Basurto 2024) but not yet uploaded; search arXiv for the N before claiming.
 - Submitting to Packomania is by email (an outbound message on the human's behalf) and is asked not to happen in October 2026; claim the verified construction, not a submission.
+- The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables': crt, ccq, cpd, cpt, crc_100 to crc_800, csc, csq, cxd). Neither v2.2 nor the current release (commit fd6316dd, 2026-10-18, 21 tables) has a cci table, and the regular hexagon (chx, partial win p3) enters only at v2.6 (commit 94083ac11d, 2026-09-26T23:42Z). So if the queued zip is v2.2 (the count and the timing agree; the zip itself is not public), it holds no cci or chx candidate (checked 2026-10-19).
 
 ## Point your agent at it
 
