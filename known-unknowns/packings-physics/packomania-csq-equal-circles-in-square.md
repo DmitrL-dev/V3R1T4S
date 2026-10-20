@@ -55,6 +55,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Coordinate convention: Packomania files are centered at the origin with side length 1 (coordinates in [-0.5, 0.5]); do not test containment against [0, 1] without shifting.
 - Submission is by email and asked to pause in October 2026; do not count a submission as a claim.
 - The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables'). Its csq shelf has 2,345 records at N from 385 to 9996, and the only one at N <= 400 is N = 385, so for a claim at N <= 400 the bundle can matter only at N = 385 (the N list is in RESULTS_TABLE.md at that commit; the count and the timing agree, but the queued zip is not public; checked 2026-10-19).
+- Free cells (2026-10-20): 1813 rows, N in 501..9984, lie below the row of a larger N by at least 1e-10 (largest 8.35e-4, N = 992 below 1003); deleting circles from the posted N' file reaches them with no search (N = 992 from csq1003.txt: r* = 0.0167080057180 against the row 0.015873015873). They match, in count and range, the 15-Oct-2026 Vidit Patankar entry on pending-requests.html (1813 csq candidates, 501..9984), so they are covered by the queue rule, not open. The sibling tables csc, crt and ccq (partial win p2) have no free cell. Compare a claim with B(N) = max over listed N' >= N (kit/propagated_bar.py, PR #573).
 
 ## Point your agent at it
 

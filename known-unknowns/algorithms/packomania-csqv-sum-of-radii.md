@@ -58,6 +58,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Submitting to Packomania is by email; do not send anything without the human's explicit permission.
 - The live table is frozen for October 2026 (pending-requests.html) with 472 queued candidates from Jason Liang for N=63..10000 and 462 public wins above N=100 in his repo: for N > 62 the frozen table is far below the public frontier, so beating the table alone is meaningless; always beat the public repos too.
 - jasonzliang's repository is updated daily by automation; re-fetch at verification time and check every sota/* subdirectory for the N in question.
+- Small circles can always be added, so the bar for N is the best sum at any N' <= N; at margin 1e-11 txt/sumradii.txt has no row below such a bar (checked 2026-10-20 with kit/propagated_bar.py --direction up, PR #573).
 
 ## Point your agent at it
 

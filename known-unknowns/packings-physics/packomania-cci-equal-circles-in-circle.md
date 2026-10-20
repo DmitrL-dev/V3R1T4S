@@ -55,6 +55,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Known-literature trap: an improvement may already be published (Lai-Hao 2024, Basurto 2024) but not yet uploaded; search arXiv for the N before claiming.
 - Submitting to Packomania is by email (an outbound message on the human's behalf) and is asked not to happen in October 2026; claim the verified construction, not a submission.
 - The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables': crt, ccq, cpd, cpt, crc_100 to crc_800, csc, csq, cxd). Neither v2.2 nor the current release (commit fd6316dd, 2026-10-18, 21 tables) has a cci table, and the regular hexagon (chx, partial win p3) enters only at v2.6 (commit 94083ac11d, 2026-09-26T23:42Z). So if the queued zip is v2.2 (the count and the timing agree; the zip itself is not public), it holds no cci or chx candidate (checked 2026-10-19).
+- Free cells (2026-10-20): 193 rows, N in 652..3943, lie below the row of a larger N by at least 1e-11 (largest 5.81e-5, N = 1260 below 1261, reached from cci1261.txt with no search); they match, in count and range, the 15-Oct-2026 Vidit Patankar entry on pending-requests.html (193 cci candidates, 652..3943). In chx (partial win p3) one row is free and not queued: N = 266 lies 6.85e-7 below N = 267. Compare a claim with B(N) = max over listed N' >= N (kit/propagated_bar.py, PR #573).
 
 ## Point your agent at it
 

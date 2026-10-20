@@ -324,7 +324,8 @@
     "Reading the table wrong: it prints 12 decimals; improvements must exceed rounding (>= 1e-11) and be computed from the certified radii, not the solver's float output.",
     "Submitting to Packomania is by email; do not send anything without the human's explicit permission.",
     "The live table is frozen for October 2026 (pending-requests.html) with 472 queued candidates from Jason Liang for N=63..10000 and 462 public wins above N=100 in his repo: for N > 62 the frozen table is far below the public frontier, so beating the table alone is meaningless; always beat the public repos too.",
-    "jasonzliang's repository is updated daily by automation; re-fetch at verification time and check every sota/* subdirectory for the N in question."
+    "jasonzliang's repository is updated daily by automation; re-fetch at verification time and check every sota/* subdirectory for the N in question.",
+    "Small circles can always be added, so the bar for N is the best sum at any N' <= N; at margin 1e-11 txt/sumradii.txt has no row below such a bar (checked 2026-10-20 with kit/propagated_bar.py --direction up, PR #573)."
    ]
   },
   {
@@ -9510,7 +9511,8 @@
     "Stale-table trap: Packomania has a queue of over 5,000 pending candidates (2026-10-08). cci was not in the queue on 2026-10-08, but the 17-Oct-2026 list has 193 cci candidates in 652..3943; re-check pending-requests.html and the per-N page immediately before claiming.",
     "Known-literature trap: an improvement may already be published (Lai-Hao 2024, Basurto 2024) but not yet uploaded; search arXiv for the N before claiming.",
     "Submitting to Packomania is by email (an outbound message on the human's behalf) and is asked not to happen in October 2026; claim the verified construction, not a submission.",
-    "The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables': crt, ccq, cpd, cpt, crc_100 to crc_800, csc, csq, cxd). Neither v2.2 nor the current release (commit fd6316dd, 2026-10-18, 21 tables) has a cci table, and the regular hexagon (chx, partial win p3) enters only at v2.6 (commit 94083ac11d, 2026-09-26T23:42Z). So if the queued zip is v2.2 (the count and the timing agree; the zip itself is not public), it holds no cci or chx candidate (checked 2026-10-19)."
+    "The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables': crt, ccq, cpd, cpt, crc_100 to crc_800, csc, csq, cxd). Neither v2.2 nor the current release (commit fd6316dd, 2026-10-18, 21 tables) has a cci table, and the regular hexagon (chx, partial win p3) enters only at v2.6 (commit 94083ac11d, 2026-09-26T23:42Z). So if the queued zip is v2.2 (the count and the timing agree; the zip itself is not public), it holds no cci or chx candidate (checked 2026-10-19).",
+    "Free cells (2026-10-20): 193 rows, N in 652..3943, lie below the row of a larger N by at least 1e-11 (largest 5.81e-5, N = 1260 below 1261, reached from cci1261.txt with no search); they match, in count and range, the 15-Oct-2026 Vidit Patankar entry on pending-requests.html (193 cci candidates, 652..3943). In chx (partial win p3) one row is free and not queued: N = 266 lies 6.85e-7 below N = 267. Compare a claim with B(N) = max over listed N' >= N (kit/propagated_bar.py, PR #573)."
    ]
   },
   {
@@ -9561,7 +9563,8 @@
     "12-decimal table: an apparent improvement in the 12th decimal can be the table's own rounding (Packomania truncates to 12 decimals on csq); require the 1e-11 margin against the exact posted value and prefer re-deriving the table radius from the posted coordinates (csq<N>.txt) in mpmath.",
     "Coordinate convention: Packomania files are centered at the origin with side length 1 (coordinates in [-0.5, 0.5]); do not test containment against [0, 1] without shifting.",
     "Submission is by email and asked to pause in October 2026; do not count a submission as a claim.",
-    "The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables'). Its csq shelf has 2,345 records at N from 385 to 9996, and the only one at N <= 400 is N = 385, so for a claim at N <= 400 the bundle can matter only at N = 385 (the N list is in RESULTS_TABLE.md at that commit; the count and the timing agree, but the queued zip is not public; checked 2026-10-19)."
+    "The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables'). Its csq shelf has 2,345 records at N from 385 to 9996, and the only one at N <= 400 is N = 385, so for a claim at N <= 400 the bundle can matter only at N = 385 (the N list is in RESULTS_TABLE.md at that commit; the count and the timing agree, but the queued zip is not public; checked 2026-10-19).",
+    "Free cells (2026-10-20): 1813 rows, N in 501..9984, lie below the row of a larger N by at least 1e-10 (largest 8.35e-4, N = 992 below 1003); deleting circles from the posted N' file reaches them with no search (N = 992 from csq1003.txt: r* = 0.0167080057180 against the row 0.015873015873). They match, in count and range, the 15-Oct-2026 Vidit Patankar entry on pending-requests.html (1813 csq candidates, 501..9984), so they are covered by the queue rule, not open. The sibling tables csc, crt and ccq (partial win p2) have no free cell. Compare a claim with B(N) = max over listed N' >= N (kit/propagated_bar.py, PR #573)."
    ]
   },
   {
