@@ -157,21 +157,61 @@ class BallTests(Files):
         claim = self.write("rot.txt", rotate(pts, rotation(4, 6)))
         flags, text = self.run_check(claim, [ref], container="ball")
         self.assertEqual(len(flags), 1, text)
+        self.assertIn("copy-like", flags[0][1])
+        self.assertIn("rotation or reflection about the origin", text)
+
+    def test_isometry_test_still_flags_a_rotated_copy_without_the_search(self):
+        pts = ball_spread(40, 4, 5, 0.3)
+        ref = self.write("ball.txt", pts, index=True)
+        claim = self.write("rot.txt", rotate(pts, rotation(4, 6)))
+        flags, text = self.run_check(claim, [ref], container="ball", rotation_budget=0)
+        self.assertEqual(len(flags), 1, text)
         self.assertIn("isometric copy", flags[0][1])
 
-    def test_rotated_and_moved_ball_copy_is_outside_the_isometry_test(self):
-        # documented limit: a rotation by a non-symmetry followed by a move larger than --iso-tol is not detected
+    def test_rotated_and_moved_ball_copy_is_flagged_by_the_rotation_search(self):
         pts = ball_spread(40, 4, 12, 0.3)
         rng = random.Random(13)
         moved = rotate([tuple(v + rng.uniform(-1e-3, 1e-3) for v in p) for p in pts], rotation(4, 14))
-        flags, text = self.run_check(self.write("pb.txt", moved), [self.write("pa.txt", pts)], container="ball")
+        claim, ref = self.write("pb.txt", moved), self.write("pa.txt", pts)
+        flags, text = self.run_check(claim, [ref], container="ball")
+        self.assertEqual(len(flags), 1, text)
+        self.assertIn("copy-like", flags[0][1])
+        # without the search this is the documented blind spot: moved by more than --iso-tol
+        flags, text = self.run_check(claim, [ref], container="ball", rotation_budget=0)
         self.assertEqual(flags, [], text)
+
+    def test_rotated_deletion_and_insertion_in_a_ball_are_flagged(self):
+        pts = ball_spread(60, 4, 21, 0.25)
+        rng = random.Random(22)
+        m = rotation(4, 23)
+        ref = self.write("full.txt", pts, index=True)
+        part = rotate([tuple(v + rng.uniform(-1e-3, 1e-3) for v in p) for p in pts[:30] + pts[32:]], m)
+        flags, text = self.run_check(self.write("del.txt", part), [ref], container="ball")
+        self.assertEqual(len(flags), 1, text)
+        self.assertIn("deletion-like", flags[0][1])
+        flags, text = self.run_check(ref, [self.write("small.txt", part)], container="ball")
+        self.assertEqual(len(flags), 1, text)
+        self.assertIn("insertion-like", flags[0][1])
+
+    def test_rotated_copy_in_a_disk_is_flagged(self):
+        pts = ball_spread(150, 2, 31, 0.1)
+        rng = random.Random(32)
+        moved = rotate([tuple(v + rng.uniform(-5e-4, 5e-4) for v in p) for p in pts], rotation(2, 33))
+        flags, text = self.run_check(self.write("d2.txt", moved), [self.write("d1.txt", pts)], container="ball")
+        self.assertEqual(len(flags), 1, text)
+        self.assertIn("copy-like", flags[0][1])
 
     def test_different_ball_configuration_is_not_flagged(self):
         ref = self.write("ball1.txt", ball_spread(40, 4, 7, 0.3))
         claim = self.write("ball2.txt", ball_spread(40, 4, 8, 0.3))
         flags, text = self.run_check(claim, [ref], container="ball")
         self.assertEqual(flags, [], text)
+
+    def test_box_container_does_not_search_rotations(self):
+        pts = ball_spread(40, 3, 41, 0.25)
+        claim = self.write("r3.txt", rotate(pts, rotation(3, 42)))
+        flags, text = self.run_check(claim, [self.write("p3.txt", pts)], container="box")
+        self.assertNotIn("rotation or reflection", text)
 
 
 class CliTests(Files):
