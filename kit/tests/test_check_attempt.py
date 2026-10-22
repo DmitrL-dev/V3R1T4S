@@ -51,7 +51,7 @@ class AttemptRecordTests(unittest.TestCase):
         d = os.path.join(self.root, "attempts", target)
         os.makedirs(d, exist_ok=True)
         p = os.path.join(d, name)
-        with open(p, "w", encoding="utf-8") as f:
+        with open(p, "w", encoding="utf-8", newline="") as f:  # exact bytes, also on Windows
             f.write(text)
         return p
 
