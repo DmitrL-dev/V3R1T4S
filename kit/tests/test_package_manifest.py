@@ -31,7 +31,7 @@ class PackageManifest(fixtures.Base):
         self.readme = next(line for line in self.original.splitlines() if line.endswith('  README.md'))
 
     def verify(self, text, failure=None):
-        self.manifest.write_text(text)
+        self.manifest.write_bytes(text.encode('utf-8'))  # exact bytes, also on Windows
         if failure is None:
             self.assertPass('--package', self.P, '--no-exec')
         else:
