@@ -41,13 +41,13 @@
    "id": "record-tables",
    "name": "Record tables",
    "description": "Codes, designs, packings and constructions measured against public tables.",
-   "targets": 17
+   "targets": 27
   },
   {
    "id": "graphs-games-automata",
    "name": "Graphs, games and automata",
    "description": "Graph records, puzzles, tilings and cellular automata.",
-   "targets": 14
+   "targets": 49
   },
   {
    "id": "packings-physics",
@@ -59,13 +59,13 @@
    "id": "algorithms",
    "name": "Algorithms",
    "description": "Fast matrix multiplication schemes and other algorithmic records.",
-   "targets": 6
+   "targets": 13
   },
   {
    "id": "optimization-benchmarks",
    "name": "Optimization benchmarks",
    "description": "Best-known solutions on public routing, scheduling and MIP benchmark libraries.",
-   "targets": 9
+   "targets": 14
   },
   {
    "id": "sky-archives",
