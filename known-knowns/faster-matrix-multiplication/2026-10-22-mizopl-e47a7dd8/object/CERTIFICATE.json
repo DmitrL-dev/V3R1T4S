@@ -1,0 +1,120 @@
+{
+  "target_id": "fmm-additive-complexity-records",
+  "method": "CLSS Matroid-Optimal Distance-1 Target Closure (Cl_1) + Tellegen Transposition on W^T + Stepping-Stone LNS",
+  "total_verified_schemes": 4,
+  "exact_sota_champion_formats_beaten": [
+    "5x6x6"
+  ],
+  "new_sota_rank_zt_formats_reduced": [
+    "3x3x7",
+    "3x5x6",
+    "3x5x7"
+  ],
+  "upstream_tie_note": "When PR #616 opened at 2026-10-22T02:57Z, upstream had no rank-49 file for 3x3x7, no rank-68 file for 3x5x6, no rank-79 file for 3x5x7, and 5x6x6 was at cr=499 (and 502 merged in V3R1T4S). Upstream commit 1781ca39 (2026-10-22T15:24:59Z) was published independently by A. Perminov (@dronperminov) later that day, adding files tying these four counts (167, 245, 294, 492) in docs/additions.md.",
+  "schemes": [
+    {
+      "stem": "3x3x7_m49_ZT",
+      "source_scheme": "schemes/results/ZT/3x3x7_m49_ZT.json",
+      "source_sha256": "52147707b318e29596e6faf0d66102911dd9e3f86d9bd0094b0e6b1896070fff",
+      "fmt": "3x3x7",
+      "n": [
+        3,
+        3,
+        7
+      ],
+      "m": 49,
+      "sota_rank": 49,
+      "live_min_m": 51,
+      "live_min_cr": 146,
+      "matmulcatalog_adds": 404,
+      "cu": 33,
+      "cv": 53,
+      "cw": 81,
+      "cr": 167,
+      "cn": 404,
+      "delta_cr": 21,
+      "category": "new_sota_rank_zt_addition_reduced",
+      "filename": "3x3x7_m49_cr167_cn404_ZT_reduced.json",
+      "sha256": "2f10739cd6200745967118e413c1433a1781a8db374eb3343c3fe92c7a7fc280",
+      "bytes": 26027
+    },
+    {
+      "stem": "3x5x6_m68_ZT",
+      "source_scheme": "schemes/results/ZT/3x5x6_m68_ZT.json",
+      "source_sha256": "9675decf7533fae8ac643c4cf6fccff63f9ef76f41fc781888a7b806cd6e8cac",
+      "fmt": "3x5x6",
+      "n": [
+        3,
+        5,
+        6
+      ],
+      "m": 68,
+      "sota_rank": 68,
+      "live_min_m": 70,
+      "live_min_cr": 252,
+      "matmulcatalog_adds": 482,
+      "cu": 56,
+      "cv": 78,
+      "cw": 111,
+      "cr": 245,
+      "cn": 494,
+      "delta_cr": -7,
+      "category": "new_sota_rank_zt_addition_reduced",
+      "filename": "3x5x6_m68_cr245_cn494_ZT_reduced.json",
+      "sha256": "4271edeb86e3c452ebaa6edec9647590162e7093a0b4468b5c5dbc866acc850f",
+      "bytes": 37078
+    },
+    {
+      "stem": "3x5x7_m79_ZT",
+      "source_scheme": "schemes/results/ZT/3x5x7_m79_ZT.json",
+      "source_sha256": "9f94da6729e900a0ee525b97935d03d35306159626459768a553abf852cff0c6",
+      "fmt": "3x5x7",
+      "n": [
+        3,
+        5,
+        7
+      ],
+      "m": 79,
+      "sota_rank": 79,
+      "live_min_m": 83,
+      "live_min_cr": 291,
+      "matmulcatalog_adds": 520,
+      "cu": 66,
+      "cv": 97,
+      "cw": 131,
+      "cr": 294,
+      "cn": 520,
+      "delta_cr": 3,
+      "category": "new_sota_rank_zt_addition_reduced",
+      "filename": "3x5x7_m79_cr294_cn520_ZT_reduced.json",
+      "sha256": "7aaaceef49b6d190b1a50d3779209c6b216bedef03578144602a8d3808c4e977",
+      "bytes": 45808
+    },
+    {
+      "stem": "5x6x6_m130_c1697_ZT",
+      "source_scheme": "schemes/results/naive_addition_reduced_ZT/5x6x6_m130_c1697_ZT.json",
+      "source_sha256": "125bdb24d3c3303130fc9be98c98f9421ddd197b27894dada481a8d23ab4b0c7",
+      "fmt": "5x6x6",
+      "n": [
+        5,
+        6,
+        6
+      ],
+      "m": 130,
+      "sota_rank": 130,
+      "live_min_m": 130,
+      "live_min_cr": 499,
+      "matmulcatalog_adds": 1716,
+      "cu": 128,
+      "cv": 139,
+      "cw": 225,
+      "cr": 492,
+      "cn": 1697,
+      "delta_cr": -7,
+      "category": "exact_sota_champion_improvement",
+      "filename": "5x6x6_m130_cr492_cn1697_ZT_reduced.json",
+      "sha256": "b17cdb716cc62a02d0b7d5fa982067147dd3c2ea721723986fa5af9e3e2a27b2",
+      "bytes": 77200
+    }
+  ]
+}
