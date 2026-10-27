@@ -50,7 +50,7 @@ It asks six short questions, schedules nothing until you type **go** (setup only
 
 | Win | Beats | Status |
 |---|---|---|
-| 🔐 Hebern 5-rotor, Problem 8 ("hard") | only solver on the setter's table | ✅ [Listed by the setter](http://www.jfbouch.fr/crypto/challenges/H5/index.html) |
+| 🔐 Hebern 5-rotor, Problem 8 ("hard") | first solver on the setter's table (G. Lasry + AI Claude solved it second, 24/10/26) | ✅ [Listed by the setter](http://www.jfbouch.fr/crypto/challenges/H5/index.html) |
 | 🔐 Kryha v2, Problem 5 ("difficult") | only solver on the setter's table | ✅ [Listed by the setter](http://www.jfbouch.fr/crypto/challenges/KRYHA2/index.html) |
 | 🕸️ Graph (15,4): 13,365 vertices | 11,780 (+13.5 %) | 🧪 Verified internally |
 | 🕸️ 6 more degree–diameter cells | +0.03 % to +5.3 % | 🧪 Verified internally |

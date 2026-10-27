@@ -10,6 +10,8 @@ directory contains nothing about the solutions except the salted commitments bel
 
 Both solver tables were re-fetched on 2026-10-13 (one plain GET each): the setter rates Problem 8 "hard" and Kryha
 version 2 Problem 5 "difficult", and "Pliny the Liberator 08/10/26" is the only solver listed for either problem.
+Re-fetched on 2026-10-27: the Hebern 5 table now also lists "G.Lasry+AI Claude (1) 24/10/26" for Problem 8, after
+ours; Kryha version 2 Problem 5 still lists only ours.
 
 ## Salted commitments
 
