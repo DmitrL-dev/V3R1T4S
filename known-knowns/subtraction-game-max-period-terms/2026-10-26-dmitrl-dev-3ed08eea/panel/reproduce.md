@@ -2,20 +2,22 @@
 
 context: subagent (fresh context, Claude Science delegation)
 
-Role: REPRODUCE (kit/RUN.md step 6). Input: the claim package only (claim/, 21 zip entries). The network was used for the OEIS status check and the bank text.
+Path key (added by the claimant on 2026-10-28 at the maintainer's request, PR #781 review): this review was run on the panel zip, whose layout differs from this package. Its code/A/ and code/B/ are how-we-built-it/A/ and how-we-built-it/B/ here (byte-identical). These panel inputs are not shipped: CLAIM.md and REPRODUCE.md (the claim summary and its commands; see README.md, RUN_IT_YOURSELF.md and how-we-built-it/BUILD.md), histogram_sg_23_A.txt, histogram_sg_23_B.txt and maximising_set.txt (objects/; object/A389690_23.txt holds the same maximising set and, as lines 10-682, the same 673 histogram lines, sha256 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac), the check helpers verify_oeis.py and sg_ref.py (code/check/), and a389690_2.txt (inputs/), the OEIS program https://oeis.org/A389690/a389690_2.txt (sha256 9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f). File references in the text were changed only to name these package paths, URLs or bare file names; no finding, number or verdict changed. Verbatim logs keep the zip's paths.
 
-Claim (claim/CLAIM.md): "A389690(23) = 3570: over all 2^22 subtraction sets S with max S = 23, the longest eventual period of the Sprague-Grundy sequence is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}."
+Role: REPRODUCE (kit/RUN.md step 6). Input: the claim package only (the panel zip, 21 entries). The network was used for the OEIS status check and the bank text.
 
-Summary: I wrote two exhaustive checkers from the definition before reading claim/code/. Both cover all 4194304 sets. Both give a maximum of 3570, attained by exactly one set, the claimed one. Both produce a 673-line period histogram that matches objects/histogram_sg_23_A.txt and objects/histogram_sg_23_B.txt line by line. The claim's own commands reproduce the saved objects byte for byte. The term is not in the OEIS entry, its b-file or its history. I found no mismatch, missing object or non-determinism.
+Claim (CLAIM.md): "A389690(23) = 3570: over all 2^22 subtraction sets S with max S = 23, the longest eventual period of the Sprague-Grundy sequence is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}."
+
+Summary: I wrote two exhaustive checkers from the definition before reading the claimant's code (how-we-built-it/A and how-we-built-it/B). Both cover all 4194304 sets. Both give a maximum of 3570, attained by exactly one set, the claimed one. Both produce a 673-line period histogram that matches histogram_sg_23_A.txt and histogram_sg_23_B.txt line by line. The claim's own commands reproduce the saved objects byte for byte. The term is not in the OEIS entry, its b-file or its history. I found no mismatch, missing object or non-determinism.
 
 ## 1. Definition (quoted before reading any code)
 
 - OEIS A389690 name, fetched as https://oeis.org/search?q=id:A389690&fmt=json at 2026-10-26T07:15:30Z UTC (HTTP 200): "Length of the longest possible eventual period of the Sprague-Grundy value of a subtraction game where the largest element of the subtraction set is n."
-- Bank success criterion, from bank/targets.json at commit 8846324, fetched from https://raw.githubusercontent.com/elder-plinius/V3R1T4S/8846324/bank/targets.json at 2026-10-26T07:23:31Z UTC (HTTP 200). Its success_criterion matches the quote in claim/CLAIM.md character for character: "S ranges over all subsets of {1, ..., n} that contain n; the period is the minimal eventual period, found as the first repeat of the length-n window of outcomes or Sprague-Grundy values".
+- Bank success criterion, from bank/targets.json at commit 8846324, fetched from https://raw.githubusercontent.com/elder-plinius/V3R1T4S/8846324/bank/targets.json at 2026-10-26T07:23:31Z UTC (HTTP 200). Its success_criterion matches the quote in CLAIM.md character for character: "S ranges over all subsets of {1, ..., n} that contain n; the period is the minimal eventual period, found as the first repeat of the length-n window of outcomes or Sprague-Grundy values".
 - How I formalised it: S is a subset of {1..n} with n in S; g(0) = 0 and g(k) = mex{ g(k-s) : s in S, s <= k }; period(S) is the least p >= 1 with g(k+p) = g(k) for all large k; a(n) is the maximum of period(S) over the 2^(n-1) sets.
 - My plain reference (ref.py) reproduces the entry's worked examples. For n = 3 it gives {1,2,3} -> 4, {2,3} -> 5, {1,3} -> 2 and {3} -> 6. For S = {1,4,10} it gives the sequence 0,1,0,1,2,0,1,0,1,2,3,2,3,0,1,3, then the block (0,1,0,1,2,0,1,2,0,1,2) repeating with period 11, as in the entry.
 
-## 2. Own checkers (written before opening claim/code/; kept outside claim/)
+## 2. Own checkers (written before opening the claimant's code; kept outside the claim files)
 
 1. sgper.c runs Brent cycle detection on the window state W_k = (g(k), ..., g(k+n-1)). The window is packed 5 bits per value into an unsigned __int128. There is no step cap. The histogram array has 2^20 slots plus an overflow counter.
 2. sgdict.c uses a different algorithm, the literal first repeat of the length-n window. It computes values from the value array and stores windows in an open-addressing hash table, starting at k = n-1 (no padding). The period is k - q at the first repeat.
@@ -34,8 +36,8 @@ Compiler: Apple clang 21.0.0 (arm64), `cc -O2`; Python 3.11. Full sources and sh
 ```
 cc -O2 -o sgper sgper.c   && ./sgper 23 0 4194304 > c_23.txt     # 1 process, 7.4 s
 cc -O2 -o sgdict sgdict.c && ./sgdict 23 0 4194304 > d_23.txt    # 1 process, 3.0 s
-diff <(tail -n +2 c_23.txt) <(tail -n +3 claim/objects/histogram_sg_23_A.txt)   # no output
-diff <(tail -n +2 c_23.txt) <(tail -n +2 claim/objects/histogram_sg_23_B.txt)   # no output
+diff <(tail -n +2 c_23.txt) <(tail -n +3 objects/histogram_sg_23_A.txt)   # no output
+diff <(tail -n +2 c_23.txt) <(tail -n +2 objects/histogram_sg_23_B.txt)   # no output
 diff <(tail -n +2 d_23.txt) <(tail -n +2 c_23.txt)                              # no output
 ```
 
@@ -47,15 +49,15 @@ n 23 lo 0 hi 4194304 total 4194304 max 3570 nmax 1 firstmaxmask 3846998 maxvalue
 ```
 
 - Both histograms have 673 lines of the form "period count", and the counts sum to 4194304 = 2^22. The first lines are 2 1526; 3 14853; 4 30810; 5 37891; 6 32827; the last lines are 1536 1; 1612 1; 1620 1; 1650 1; 2232 1; 3570 1.
-- The sha256 of the 673 histogram lines (each ending in a newline) is 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac. It is the same for c_23.txt, d_23.txt, objects/histogram_sg_23_A.txt (from line 3) and objects/histogram_sg_23_B.txt (from line 2).
+- The sha256 of the 673 histogram lines (each ending in a newline) is 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac. It is the same for c_23.txt, d_23.txt, histogram_sg_23_A.txt (from line 3) and histogram_sg_23_B.txt (from line 2).
 - Determinism: sgper was rerun as two halves in 2 parallel processes (masks [0, 2^21) and [2^21, 2^22)) and the halves were merged. The merged histogram is identical to the single run. The half maxima are 1650 (sets without move 22) and 3570 (sets with move 22).
 
 ## 5. The maximising set
 
-- objects/maximising_set.txt reads "n 23 / mask 3846998 / set 2 3 5 7 9 10 13 14 16 18 20 21 22 23 / period 3570". Recomputed from the set: the sum of 2^(s-1) over s < 23 is 3846998. Adding bit 22 for move 23 gives 8041302, which is the argmask in the header of objects/histogram_sg_23_A.txt.
+- maximising_set.txt reads "n 23 / mask 3846998 / set 2 3 5 7 9 10 13 14 16 18 20 21 22 23 / period 3570". Recomputed from the set: the sum of 2^(s-1) over s < 23 is 3846998. Adding bit 22 for move 23 gives 8041302, which is the argmask in the header of histogram_sg_23_A.txt.
 - sgper.c and sgdict.c both report firstmaxmask 3846998 and nmax 1, i.e. exactly one set has the maximum.
 - ref.py gives period 3570 for this set. The first repeated window is g(1012..1034), and it recurs at g(4582..4604); 4605 values were computed. The preperiod is 1012. No proper divisor of 3570 is a period of g on [1012, 4605). The largest SG value is 13.
-- The OEIS program claim/inputs/a389690_2.txt has the same sha256 (9fe51a4c...b61f) as https://oeis.org/A389690/a389690_2.txt fetched at 2026-10-26T07:17:25Z. Run through claim/code/check/verify_oeis.py, it gives period 3570 and preperiod_start 1012.
+- The claim's copy of the OEIS program, a389690_2.txt, has the same sha256 (9fe51a4c...b61f) as https://oeis.org/A389690/a389690_2.txt fetched at 2026-10-26T07:17:25Z. Run through the claim's helper verify_oeis.py, it gives period 3570 and preperiod_start 1012.
 - Over all sets, the longest prefix needed before the first window repeat is 4605 values (sgdict maxvalues), which is this set.
 
 ## 6. Proof steps re-derived
@@ -68,7 +70,7 @@ n 23 lo 0 hi 4194304 total 4194304 max 3570 nmax 1 firstmaxmask 3846998 maxvalue
 6. Maximum and uniqueness. The last histogram line is "3570 1": no set has a longer period, and exactly one set has 3570. The next largest period is 2232.
 7. a(23) = 3570 < a(22) = 4464 is not suspicious. No program caps the search by the previous term, and the listed terms already drop (a(11) < a(10), a(17) < a(16)).
 
-## 7. claim/REPRODUCE.md commands (run in a fresh copy of claim/)
+## 7. The claim's REPRODUCE.md commands (run in a fresh copy of the claim files)
 
 Log (verbatim; timings vary; the n = 1..22 lines have their timing suffix removed):
 
@@ -121,20 +123,20 @@ A sg 21 max 1180 set [2, 5, 7, 13, 16, 18, 20, 21] sets 1048576 periods 424 over
 A sg 22 max 4464 set [2, 3, 5, 6, 9, 13, 16, 17, 19, 20, 22] sets 2097152 periods 530 overflow 0
 ```
 
-Program B: Rust was not preinstalled, so cargo 1.99.1 and rustc 1.99.1 came from conda-forge. `(cd code/B && cargo build --release --offline -j 2)` finished with "Finished `release` profile [optimized]". Then `code/B/target/release/subper_b sg 23 2 > out_B.txt` (7.0 s) and `code/B/target/release/subper_b sg 23 1 > out_B_t1.txt` (10.2 s) were run. Both outputs are byte-identical to objects/histogram_sg_23_B.txt (see the cmp and shasum lines above).
+Program B: Rust was not preinstalled, so cargo 1.99.1 and rustc 1.99.1 came from conda-forge. `(cd how-we-built-it/B && cargo build --release --offline -j 2)` finished with "Finished `release` profile [optimized]". Then `how-we-built-it/B/target/release/subper_b sg 23 2 > out_B.txt` (7.0 s) and `how-we-built-it/B/target/release/subper_b sg 23 1 > out_B_t1.txt` (10.2 s) were run. Both outputs are byte-identical to histogram_sg_23_B.txt (see the cmp and shasum lines above).
 
 Process/thread counts of 2 and 1 replaced REPRODUCE.md's 4, because of the panel's 2-process limit. For both programs and both counts the output is byte-identical to the saved object, so the result does not depend on the count.
 
 ## 8. Saved-file integrity
 
-- The sha256 values of objects/maximising_set.txt, objects/histogram_sg_23_A.txt and objects/histogram_sg_23_B.txt equal those in claim/CLAIM.md.
-- Every file named under Files in claim/CLAIM.md is present. code/check/verify_oeis.py mentions inputs/a389689_1.txt, but only in its wl branch. That file is absent, and this sg claim does not need it.
+- The sha256 values of maximising_set.txt, histogram_sg_23_A.txt and histogram_sg_23_B.txt equal those in CLAIM.md.
+- Every file named under Files in CLAIM.md is present in the panel zip. verify_oeis.py mentions a389689_1.txt, but only in its wl branch. That file is absent, and this sg claim does not need it.
 - Program A (Brent on the packed window, values computed from the window) and program B (hash map of oldest-first windows, values from the array) share no code. They agree with each other: compare.py reports max_equal, set_equal and hist_equal as true. Both also agree with my two checkers.
 
 ## 9. OEIS status at verification time (property 3)
 
 - Entry, from the JSON fetched at 07:15:30Z: data 2,4,6,8,10,12,22,25,28,58,54,87,114,144,189,336,306,456,728,1178,1180,4464 (22 terms, n = 1..22), keyword nonn,more, revision 36 (2025-10-26). There is no term for n = 23. The entry HTML fetched at 07:15:29Z does not contain the string 3570.
-- The b-file https://oeis.org/A389690/b389690.txt (07:17:23Z, HTTP 200, 183 bytes) is synthesized from the entry and lists n = 1..22. Its sha256 a0fc3d77b3ef73421b37232cc8d9071031a7eddaf9f5d6f3ce5b0c6fa418a2b8 equals the value recorded in claim/CLAIM.md.
+- The b-file https://oeis.org/A389690/b389690.txt (07:17:23Z, HTTP 200, 183 bytes) is synthesized from the entry and lists n = 1..22. Its sha256 a0fc3d77b3ef73421b37232cc8d9071031a7eddaf9f5d6f3ce5b0c6fa418a2b8 equals the value recorded in CLAIM.md.
 - History: https://oeis.org/history?seq=A389690 plus &start=10, &start=20 and &start=30 (07:17:24Z to 07:17:45Z, HTTP 200) show revisions #36 down to #1, all present. The string 3570 occurs on none of these pages.
 - The recorded sha256 values of the entry and history HTML cannot be re-matched. Two fetches of the entry 3 s apart (07:22:15Z and 07:22:18Z) already differ, and only in per-request Cloudflare tokens. This is expected and is not a content mismatch.
 

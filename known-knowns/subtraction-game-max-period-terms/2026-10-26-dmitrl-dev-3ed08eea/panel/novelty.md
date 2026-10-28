@@ -2,8 +2,10 @@
 
 context: subagent (fresh context, Claude Science delegation)
 
-role: NOVELTY skeptic. I worked only from the claim package (`claim/`) and the network.
-package: claim zip sha256 `d8fbe05071f18e492f951b4ea4d5cd172cc76c0e1c8ed66c4bcb5209a30d0161`; `claim/CLAIM.md` sha256 `26629684c4d87f59f194e3519917cfa80de80f2cd202d2c22e81c48307a127e3`; `claim/objects/maximising_set.txt` sha256 `5eb9b6efe05eabd3a01db9d9c9e8e89f13160b32996699446c3141cbf6e5900c` (matches the hash listed in `claim/CLAIM.md`).
+Path key (added by the claimant on 2026-10-28 at the maintainer's request, PR #781 review): this review was run on the panel zip, whose layout differs from this package. Its code/A/ and code/B/ are how-we-built-it/A/ and how-we-built-it/B/ here (byte-identical). These panel inputs are not shipped: CLAIM.md and REPRODUCE.md (the claim summary and its commands; see README.md, RUN_IT_YOURSELF.md and how-we-built-it/BUILD.md), histogram_sg_23_A.txt, histogram_sg_23_B.txt and maximising_set.txt (objects/; object/A389690_23.txt holds the same maximising set and, as lines 10-682, the same 673 histogram lines, sha256 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac), the check helpers verify_oeis.py and sg_ref.py (code/check/), and a389690_2.txt (inputs/), the OEIS program https://oeis.org/A389690/a389690_2.txt (sha256 9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f). File references in the text were changed only to name these package paths, URLs or bare file names; no finding, number or verdict changed. Verbatim logs keep the zip's paths.
+
+role: NOVELTY skeptic. I worked only from the claim package (the panel zip) and the network.
+package: claim zip sha256 `d8fbe05071f18e492f951b4ea4d5cd172cc76c0e1c8ed66c4bcb5209a30d0161`; its `CLAIM.md` sha256 `26629684c4d87f59f194e3519917cfa80de80f2cd202d2c22e81c48307a127e3`; its `maximising_set.txt` sha256 `5eb9b6efe05eabd3a01db9d9c9e8e89f13160b32996699446c3141cbf6e5900c` (matches the hash listed in `CLAIM.md`).
 
 novelty: NEW. No source gives A389690(23). The OEIS entry, its b-file and its history list n = 1..22 only, and no prior work found here determines the term for max S = 23.
 
@@ -20,9 +22,9 @@ Each page got exactly one plain request with `curl -sS -L`, curl 8.22.0 and its 
 | 2026-10-26T08:52:42Z | https://oeis.org/history?seq=A389690&start=20 | 200 | 31973 | `dba645925f40e71d65d1427e6db210b024c45e904107b243d90205b12b45011b` | revisions #16..#7 (NAME wording, PROG moved to a link) |
 | 2026-10-26T08:52:43Z | https://oeis.org/history?seq=A389690&start=30 | 200 | 32021 | `c07143e2d2691cf55fd65f068dc5f08e7a6967c4c03bac35f83e73a46de4d4ab` | revisions #6..#1; DATA set once in #2 (Rui Yao, Oct 10 2025) to n = 1..22 and never changed afterwards |
 | 2026-10-26T09:06:01Z | https://oeis.org/A389690/a389690.txt | 200 | 2517 | `e75eb9f55ff688588facba97830fc36f8456878d55a936f610233f669f246c14` | program file linked in earlier revisions (#8 to #29): code only, no data |
-| 2026-10-26T09:06:06Z | https://oeis.org/A389690/a389690_1.txt | 200 | 2795 | `9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f` | program file linked in #31..#32: byte-identical to `claim/inputs/a389690_2.txt` (same sha256), code only |
+| 2026-10-26T09:06:06Z | https://oeis.org/A389690/a389690_1.txt | 200 | 2795 | `9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f` | program file linked in #31..#32: byte-identical to the claim's copy `a389690_2.txt` (same sha256), code only |
 
-All 36 revisions (#36 down to #1) were read. None mentions a(23) or 3570, and none is pending after #36. The entry-page and history-page hashes differ from those recorded in `claim/CLAIM.md`, because the pages carry a live footer ('Last modified October 26 04:45 EDT 2026. Contains 400709 sequences.'). The terms and the revision list are identical to what `claim/CLAIM.md` records. The b-file hash is identical (`a0fc3d77...a2b8`). The term is therefore absent from the entry, the b-file and the history at verification time (2026-10-26T08:52:36Z to 08:52:43Z), which is criterion (3).
+All 36 revisions (#36 down to #1) were read. None mentions a(23) or 3570, and none is pending after #36. The entry-page and history-page hashes differ from those recorded in `CLAIM.md`, because the pages carry a live footer ('Last modified October 26 04:45 EDT 2026. Contains 400709 sequences.'). The terms and the revision list are identical to what `CLAIM.md` records. The b-file hash is identical (`a0fc3d77...a2b8`). The term is therefore absent from the entry, the b-file and the history at verification time (2026-10-26T08:52:36Z to 08:52:43Z), which is criterion (3).
 
 ## 2. Prior art named in the task: A. Flammenkamp, *Lange Perioden in Subtraktions-Spielen* (Bielefeld, 1997)
 
@@ -61,7 +63,7 @@ Web searches (7 queries, run by the search tool itself): the longest or maximum 
 
 | UTC | URL | HTTP | bytes | sha256 | read |
 |---|---|---|---|---|---|
-| 2026-10-26T08:58:32Z | https://api.github.com/repos/elder-plinius/V3R1T4S/commits/main | 200 | 528857 | `903136757d5d549d5aae480b63d738e3891fbc3eb00fe93c2621b88c5f3ee5e7` | main = `8846324a8fe813bf89a9ef2a60eb9b13d0ba79fd` (2026-10-25T19:26:25Z), the commit quoted in `claim/CLAIM.md` |
+| 2026-10-26T08:58:32Z | https://api.github.com/repos/elder-plinius/V3R1T4S/commits/main | 200 | 528857 | `903136757d5d549d5aae480b63d738e3891fbc3eb00fe93c2621b88c5f3ee5e7` | main = `8846324a8fe813bf89a9ef2a60eb9b13d0ba79fd` (2026-10-25T19:26:25Z), the commit quoted in `CLAIM.md` |
 | 2026-10-26T08:59:29Z | https://api.github.com/repos/elder-plinius/V3R1T4S/contents/TROPHY_CASE.md?ref=main | 200 | 43934 | `8361a4e1e7c0b5ecc89b6c947320a58de7afd36e253eb9ed40ee1e6e64f057f4` | TROPHY_CASE.md at main: blob `571f24117c6b128ffe751a39f22fcab68c498e66`, decoded 31235 bytes, sha256 `b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1`. No 'subtraction', 'A389690', 'A389689', 'Sprague', 'Grundy', '3570' or 'OEIS' |
 | 2026-10-26T08:58:34Z | https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open&per_page=100&page=1 | 200 | 2577149 | `fea859a5edea2e6d833e0a359620d45e6894184099bbf5a935ef626fc51da39d` | open PRs page 1: 100 |
 | 2026-10-26T08:58:59Z | https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open&per_page=100&page=2 | 200 | 2492855 | `a03de93c09d8b9494a2c8f92b723d5c4959eda2f3f97bfa7e971cb51da985b55` | open PRs page 2: 100 |
@@ -70,7 +72,7 @@ Web searches (7 queries, run by the search tool itself): the longest or maximum 
 | 2026-10-26T08:59:34Z | https://api.github.com/search/issues?q=repo:elder-plinius/V3R1T4S+A389690&per_page=100 | 200 | 4320 | `91ba3ff2641d84b051a76d00903c184829394d51067bc02d31bfd3b7371e0ae5` | issues+PRs, all states, 'A389690': 1 hit, the closed bank PR #699 |
 | 2026-10-26T08:59:35Z | https://api.github.com/search/issues?q=repo:elder-plinius/V3R1T4S+subtraction&per_page=100 | 200 | 210493 | `eba4c2867720474de644ad9db3d991040be9a786d45b19d0c05690dd08d9508e` | 'subtraction': 29 hits; only #699 concerns this target (the rest mention arithmetic 'subtractions') |
 | 2026-10-26T08:59:38Z | https://api.github.com/search/issues?q=repo:elder-plinius/V3R1T4S+3570&per_page=100 | 200 | 101 | `840185ac69ff01c964c2bfead7f7b8a5a7764c3814155124f82ebe285189a90f` | '3570': 0 hits |
-| 2026-10-26T09:08:40Z | https://raw.githubusercontent.com/elder-plinius/V3R1T4S/8846324a8fe813bf89a9ef2a60eb9b13d0ba79fd/bank/targets.json | 200 | 2146913 | `7c10835a078dd0ed24154e89da3a0138a11fe4c52c89627f28989429b88fe38d` | bank entry `subtraction-game-max-period-terms`: A389690 'n = 1..22 known', disclosure 'open', status_checked 2026-10-25. The success criterion is identical (after whitespace normalisation, 777 characters) to the quote in `claim/CLAIM.md` |
+| 2026-10-26T09:08:40Z | https://raw.githubusercontent.com/elder-plinius/V3R1T4S/8846324a8fe813bf89a9ef2a60eb9b13d0ba79fd/bank/targets.json | 200 | 2146913 | `7c10835a078dd0ed24154e89da3a0138a11fe4c52c89627f28989429b88fe38d` | bank entry `subtraction-game-max-period-terms`: A389690 'n = 1..22 known', disclosure 'open', status_checked 2026-10-25. The success criterion is identical (after whitespace normalisation, 777 characters) to the quote in `CLAIM.md` |
 | 2026-10-26T09:03:51Z | https://api.github.com/search/issues?q=A389690&per_page=100 | 200 | 13927 | `d337578447620cc38faeb38bc6a02c9a92f56984287102c393f850856628d6e6` | GitHub-wide issues/PRs 'A389690': #699 plus one unrelated hit |
 | 2026-10-26T09:03:53Z | https://api.github.com/search/repositories?q=subtraction+game+period&per_page=50 | 200 | 28053 | `848f15d023b058246e1284bd53c23abddc125b9204a7c4774d9976ac86b25cc0` | GitHub repositories 'subtraction game period': 1 unrelated result |
 
@@ -78,7 +80,7 @@ Open PRs: 329 in total (numbers 9..778). I scanned their titles, bodies and bran
 
 ## 5. Sanity check of the claimed object (not a reproduction of the exhaustive search)
 
-I wrote my own stdlib implementation of the entry's definition: the first repeat of the length-23 window, counted from n >= 22. For S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23} (mask 3846998, as in `claim/objects/maximising_set.txt`) it gives SG period 3570, preperiod start 1012 and largest SG value 13. The outcome (P-N) period is 119, and 3570 = 30 x 119. This agrees with the expected output in `claim/REPRODUCE.md`. The exhaustive maximum and the histogram (criteria 1-2) are for the other skeptics.
+I wrote my own stdlib implementation of the entry's definition: the first repeat of the length-23 window, counted from n >= 22. For S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23} (mask 3846998, as in `maximising_set.txt`) it gives SG period 3570, preperiod start 1012 and largest SG value 13. The outcome (P-N) period is 119, and 3570 = 30 x 119. This agrees with the expected output in `REPRODUCE.md`. The exhaustive maximum and the histogram (criteria 1-2) are for the other skeptics.
 
 Note: 3570 < a(22) = 4464 does not bear on novelty. The entry is not monotone (a(11) = 54 < a(10) = 58, a(17) = 306 < a(16) = 336), and the target asks for the exact next term, not a larger value. Nothing has been published for n = 23 that this value could tie or must beat.
 

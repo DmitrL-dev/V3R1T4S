@@ -2,7 +2,9 @@
 
 context: subagent (fresh context, Claude Science delegation)
 
-Role: CRITERION (kit/RUN.md step 6). I worked only from the claim package (claim/, unzipped from the panel zip) plus the network: OEIS for clause (3), the upstream repository for the criterion text, and arXiv/web search for subsumption. All times are UTC on 2026-10-26. File names are relative to claim/; verifier-side outputs live next to claim/ (`../runs/`) so the package itself was not modified.
+Path key (added by the claimant on 2026-10-28 at the maintainer's request, PR #781 review): this review was run on the panel zip, whose layout differs from this package. Its code/A/ and code/B/ are how-we-built-it/A/ and how-we-built-it/B/ here (byte-identical). These panel inputs are not shipped: CLAIM.md and REPRODUCE.md (the claim summary and its commands; see README.md, RUN_IT_YOURSELF.md and how-we-built-it/BUILD.md), histogram_sg_23_A.txt, histogram_sg_23_B.txt and maximising_set.txt (objects/; object/A389690_23.txt holds the same maximising set and, as lines 10-682, the same 673 histogram lines, sha256 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac), the check helpers verify_oeis.py and sg_ref.py (code/check/), and a389690_2.txt (inputs/), the OEIS program https://oeis.org/A389690/a389690_2.txt (sha256 9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f). File references in the text were changed only to name these package paths, URLs or bare file names; no finding, number or verdict changed. Verbatim logs keep the zip's paths.
+
+Role: CRITERION (kit/RUN.md step 6). I worked only from the claim package (unzipped from the panel zip) plus the network: OEIS for clause (3), the upstream repository for the criterion text, and arXiv/web search for subsumption. All times are UTC on 2026-10-26. File names are those of the claim package; verifier-side outputs (out_A.txt, out_B.txt) were written outside it, so the package itself was not modified.
 
 ## Verdict in brief
 
@@ -50,9 +52,9 @@ I found two weak points in the package. Neither is fatal, and I closed both myse
 
 ## 4. Clause (1): "an explicit maximising set S whose period an independent program recomputes exactly"
 
-- objects/maximising_set.txt gives mask 3846998 and set 2 3 5 7 9 10 13 14 16 18 20 21 22 23, with period 3570. The mask decodes to that set, and the argmask 8041302 in program A's output equals 3846998 + 2^22.
-- `python3 code/check/verify_oeis.py sg 2,3,5,7,9,10,13,14,16,18,20,21,22,23` (07:43:46Z) printed `OEIS program: period 3570 preperiod_start 1012 (0.0s) | sg_ref: period 3570 first window end 1034`.
-- **Provenance of the OEIS function.** inputs/a389690_2.txt has sha256 `9fe51a4c...b61f`. I compared its code before the demo loop, whitespace-insensitively, with the PROG field of history revision #2. They are identical apart from an en dash versus a hyphen in one docstring and a duplicated, unreachable `return best_period` line. So the recomputation really uses the entry author's function. I did not re-fetch the linked txt file itself.
+- maximising_set.txt gives mask 3846998 and set 2 3 5 7 9 10 13 14 16 18 20 21 22 23, with period 3570. The mask decodes to that set, and the argmask 8041302 in program A's output equals 3846998 + 2^22.
+- The claim's helper verify_oeis.py (`python3 verify_oeis.py sg 2,3,5,7,9,10,13,14,16,18,20,21,22,23`, 07:43:46Z) printed `OEIS program: period 3570 preperiod_start 1012 (0.0s) | sg_ref: period 3570 first window end 1034`.
+- **Provenance of the OEIS function.** The claim's copy of the OEIS program, a389690_2.txt, has sha256 `9fe51a4c...b61f`. I compared its code before the demo loop, whitespace-insensitively, with the PROG field of history revision #2. They are identical apart from an en dash versus a hyphen in one docstring and a duplicated, unreachable `return best_period` line. So the recomputation really uses the entry author's function. I did not re-fetch the linked txt file itself.
 - **My own check** (numpy, written for this review). I computed g(0..40000) for S. The maximum SG value is 13.
   - The tail [6000, 40000] (34001 values) has least string period **3570**, found by direct vectorised comparison. This is the minimal eventual period with no window argument involved.
   - g(p) = g(p+3570) fails last at p = 1011, so the sequence is periodic from p = 1012.
@@ -67,13 +69,13 @@ I found two weak points in the package. Neither is fatal, and I closed both myse
 - Hidden quantifier: both programs evidently come from the same claimant, so their independence is independence of implementation, not of authorship. The criterion does not literally require different authors. I still removed the doubt with a third search written by me (below).
 
 **Rebuild and rerun** (07:43:20Z to 07:43:36Z, at most 2 processes or threads):
-- I compiled A with `cc -O2 -o code/A/subper_a code/A/subper_a.c` and built B with `cargo build --release` (rustc 1.99.0).
-- `python3 code/A/run_a.py sg 23 2 ../runs/out_A.txt` printed `A sg 23 max 3570 set [2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23] sets 4194304 periods 673 overflow 0 7.1s`.
-- `code/B/target/release/subper_b sg 23 2 > ../runs/out_B.txt` took 9.1 s wall time.
-- `python3 code/A/compare.py ../runs/out_A.txt ../runs/out_B.txt` printed `"max_equal": true, "set_equal": true, "hist_equal": true, "sets_A": 4194304, "sets_B": 4194304, "distinct_periods": 673`.
+- I compiled A with `cc -O2 -o how-we-built-it/A/subper_a how-we-built-it/A/subper_a.c` and built B with `cargo build --release` (rustc 1.99.0).
+- `python3 how-we-built-it/A/run_a.py sg 23 2 out_A.txt` printed `A sg 23 max 3570 set [2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23] sets 4194304 periods 673 overflow 0 7.1s`.
+- `how-we-built-it/B/target/release/subper_b sg 23 2 > out_B.txt` took 9.1 s wall time.
+- `python3 how-we-built-it/A/compare.py out_A.txt out_B.txt` printed `"max_equal": true, "set_equal": true, "hist_equal": true, "sets_A": 4194304, "sets_B": 4194304, "distinct_periods": 673`.
 - `cmp` shows the reruns are byte-identical to the saved objects:
-  - out_A.txt = objects/histogram_sg_23_A.txt (sha256 `39b1a00d71e154a3224d7e7ef88bb54a9ba742e9fdae9588ef662bee311ad68a`, as listed in CLAIM.md).
-  - out_B.txt = objects/histogram_sg_23_B.txt (sha256 `deea076cb4d0e6087957f61a11286c227fe93fd2d717cceec277552b69462b4b`, as listed).
+  - out_A.txt = histogram_sg_23_A.txt (sha256 `39b1a00d71e154a3224d7e7ef88bb54a9ba742e9fdae9588ef662bee311ad68a`, as listed in CLAIM.md).
+  - out_B.txt = histogram_sg_23_B.txt (sha256 `deea076cb4d0e6087957f61a11286c227fe93fd2d717cceec277552b69462b4b`, as listed).
 
 **Both object histograms, parsed by me:**
 
@@ -113,7 +115,7 @@ The canonical period-count listing has sha256 `760aabce6a540d00660f1e4ab4a243b83
 
 ## 7. "Submitting to OEIS is an action for the human only"
 
-Nothing in claim/ asserts or implies a submission. The OEIS history has no revision after #36 of Oct 2025, so no submission had been made as of 07:40Z.
+Nothing in the claim package asserts or implies a submission. The OEIS history has no revision after #36 of Oct 2025, so no submission had been made as of 07:40Z.
 
 ## 8. Null models and sanity checks
 
@@ -184,6 +186,6 @@ int main(int argc, char **argv) {
 }
 ```
 
-confirmed_scope: Under the OEIS A389690 definition (S ranging over all 2^22 subsets of {1, ..., 23} that contain 23; period = minimal eventual period of the Sprague-Grundy sequence, i.e. the first repeat of the length-23 window counted once 23 values exist), the maximum period at n = 23 is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}, as shown by the claimant's two independently written exhaustive searches (A in C, B in Rust, both rerun here) and by this verifier's own third search, all three agreeing on the maximum and on the full 673-period histogram over 4194304 sets, with that set's period recomputed as 3570 by the entry's own Python function (inputs/a389690_2.txt) and by a direct tail-periodicity check, and with no a(23) in the OEIS entry, its b-file or any of its 36 history revisions as fetched 2026-10-26T07:39:16Z to 07:40:19Z.
+confirmed_scope: Under the OEIS A389690 definition (S ranging over all 2^22 subsets of {1, ..., 23} that contain 23; period = minimal eventual period of the Sprague-Grundy sequence, i.e. the first repeat of the length-23 window counted once 23 values exist), the maximum period at n = 23 is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}, as shown by the claimant's two independently written exhaustive searches (A in C, B in Rust, both rerun here) and by this verifier's own third search, all three agreeing on the maximum and on the full 673-period histogram over 4194304 sets, with that set's period recomputed as 3570 by the entry's own Python function (https://oeis.org/A389690/a389690_2.txt) and by a direct tail-periodicity check, and with no a(23) in the OEIS entry, its b-file or any of its 36 history revisions as fetched 2026-10-26T07:39:16Z to 07:40:19Z.
 
 pass: true

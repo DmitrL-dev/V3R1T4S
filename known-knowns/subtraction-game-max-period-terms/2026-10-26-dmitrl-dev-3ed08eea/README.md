@@ -2,7 +2,7 @@
 
 ## What
 
-Under the OEIS A389690 definition (S ranging over all 2^22 subsets of {1, ..., 23} that contain 23; period = minimal eventual period of the Sprague-Grundy sequence, i.e. the first repeat of the length-23 window counted once 23 values exist), the maximum period at n = 23 is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}, as shown by the claimant's two independently written exhaustive searches (A in C, B in Rust, both rerun here) and by this verifier's own third search, all three agreeing on the maximum and on the full 673-period histogram over 4194304 sets, with that set's period recomputed as 3570 by the entry's own Python function (inputs/a389690_2.txt) and by a direct tail-periodicity check, and with no a(23) in the OEIS entry, its b-file or any of its 36 history revisions as fetched 2026-10-26T07:39:16Z to 07:40:19Z.
+Under the OEIS A389690 definition (S ranging over all 2^22 subsets of {1, ..., 23} that contain 23; period = minimal eventual period of the Sprague-Grundy sequence, i.e. the first repeat of the length-23 window counted once 23 values exist), the maximum period at n = 23 is 3570, attained by exactly one set, S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}, as shown by the claimant's two independently written exhaustive searches (A in C, B in Rust, both rerun by the CRITERION skeptic) and by that skeptic's own third search, all three agreeing on the maximum and on the full 673-period histogram over 4194304 sets, with that set's period recomputed as 3570 by the entry's own Python function (https://oeis.org/A389690/a389690_2.txt) and by a direct tail-periodicity check, and with no a(23) in the OEIS entry, its b-file or any of its 36 history revisions as fetched 2026-10-26T07:39:16Z to 07:40:19Z.
 
 The object is object/A389690_23.txt (sha256 3ed08eead6e5ea1301ec09aaa499b0baeac472b4c423dcf0f56ea398ef220ee4): the value, the maximising set and the full histogram of periods
 over all 4194304 sets.
@@ -37,9 +37,6 @@ Snapshot with hashes: the-record-we-beat/RECORD.md.
   (Bielefeld) is not online, and Althoefer-Bueltermann (TCS 148, 1995) was read by abstract only.
 - The two programs share an author: they are independent implementations (different code, language, data layout and cycle
   detection), not independent authors. Each panel skeptic wrote and ran its own exhaustive search as well.
-- Panel note: the first NOVELTY review could not read OEIS (HTTP 403 to Python-urllib) and is kept as
-  panel/novelty.round1.md; the second, with the human's approval, read the pages with plain curl. Some skeptics reported
-  that the platform's memory recall showed lead-written notes at the start; they did not use them (panel/gate.md).
 
 ## Credits
 

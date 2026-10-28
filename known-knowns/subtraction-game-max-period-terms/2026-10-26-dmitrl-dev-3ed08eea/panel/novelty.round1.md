@@ -2,11 +2,13 @@
 
 context: subagent (fresh context, Claude Science delegation)
 
+Path key (added by the claimant on 2026-10-28 at the maintainer's request, PR #781 review): this review was run on the panel zip, whose layout differs from this package. Its code/A/ and code/B/ are how-we-built-it/A/ and how-we-built-it/B/ here (byte-identical). These panel inputs are not shipped: CLAIM.md and REPRODUCE.md (the claim summary and its commands; see README.md, RUN_IT_YOURSELF.md and how-we-built-it/BUILD.md), histogram_sg_23_A.txt, histogram_sg_23_B.txt and maximising_set.txt (objects/; object/A389690_23.txt holds the same maximising set and, as lines 10-682, the same 673 histogram lines, sha256 760aabce6a540d00660f1e4ab4a243b83a5d6e3640773d6497d67ea630bc00ac), the check helpers verify_oeis.py and sg_ref.py (code/check/), and a389690_2.txt (inputs/), the OEIS program https://oeis.org/A389690/a389690_2.txt (sha256 9fe51a4caa7f2d3f381c44fcb39b43c270c7bab12204e9cbf7e6e2c59999b61f). File references in the text were changed only to name these package paths, URLs or bare file names; no finding, number or verdict changed. Verbatim logs keep the zip's paths.
+
 - role: NOVELTY skeptic (kit/RUN.md step 6)
 - claim (CLAIM.md): A389690(23) = 3570, the longest eventual Sprague-Grundy period over all 2^22 sets S with max S = 23, attained only by S = {2, 3, 5, 7, 9, 10, 13, 14, 16, 18, 20, 21, 22, 23}
 - target: subtraction-game-max-period-terms (bank/targets.json at main 8846324a8fe813bf89a9ef2a60eb9b13d0ba79fd)
 - review window: 2026-10-26 07:15 to 07:30 UTC
-- inputs: only the package (claim/) plus the network. The sha256 values of objects/maximising_set.txt, objects/histogram_sg_23_A.txt and objects/histogram_sg_23_B.txt match the values listed in CLAIM.md.
+- inputs: only the package (the panel zip) plus the network. The sha256 values of maximising_set.txt, histogram_sg_23_A.txt and histogram_sg_23_B.txt match the values listed in CLAIM.md.
 
 **novelty: PENDING STATUS CHECK.** The primary status page could not be read. The kit says a block means fail, so this review cannot pass.
 
